@@ -19,3 +19,8 @@ origin  https://github.com/hen098/hen098.github.io.git (push)
 $ git remote set-url origin https://github.com/~
 ```
 
+##### 방금 수행한 것 취소
+
+```bash bash
+$ git reset HEAD^
+```
