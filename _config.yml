@@ -80,3 +80,4 @@ theme: clean-blog
 deploy:
   type: git
   repo: https://github.com/hen098/hen098.github.io.git
+  branch: master
