@@ -16,5 +16,5 @@ tags: ["docker"]
 ### 컨테이너
 이미지가 실행된 상태, 환경이다. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5ODQ4MDQzMiwtMTk1MDkyMTA4XX0=
+eyJoaXN0b3J5IjpbMTc5ODQ4MDQzMl19
 -->
