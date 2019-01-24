@@ -1,5 +1,6 @@
 ---
-title: Do
+title: Docker개념(이미지와 컨테이너)
+tags: ["docker"]
 ---
 # Docker
 가상머신과 유사한 기능을 가지면서, 가상머신보다 가벼운 형태이다. 
@@ -15,5 +16,5 @@ title: Do
 ### 컨테이너
 이미지가 실행된 상태, 환경이다. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3MTY0MDY2NywtMTk1MDkyMTA4XX0=
+eyJoaXN0b3J5IjpbMTc5ODQ4MDQzMiwtMTk1MDkyMTA4XX0=
 -->
