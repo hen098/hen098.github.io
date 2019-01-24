@@ -1,0 +1,67 @@
+---
+title : Web방식 페이팔 연동 방법
+tags: ["web"]
+---
+## 페이팔 연동 방식
+-   Web 방식
+-   이메일 인보이스 방식
+
+Web 방식을 이용해서 구현했었음으로, Web 방식만 작성하겠다.
+
+## Web 방식
+일반적으로 사용하는 방법이며,  페이팔 서버로 post, get 파라미터 던지고, 결과값 받는다.
+`체크아웃 버튼 추가`와 `익스프레스 체크아웃` 두가지 방법이 있다. 
+
+### 체크아웃 버튼 추가 방법
+-   페이팔 사이트에서 만든 html 코드를 추가해서 페이팔 사이트를 연결해줌
+-   가장 간단한 방법 (개발자가 아니여도 할수 있음) 
+	>[버튼만들기 사이트](https://www.paypal.com/kr/webapps/mpp/logos-buttons)
+- 결제 금액을 파라미터로 전달할 수 있다.
+
+### 익스프레스 체크아웃
+[예제](https://developer.paypal.com/docs/integration/direct/express-checkout/integration-jsv4/add-paypal-button/) 참고해서 직접 구현하거나, [아임포트](http://www.iamport.kr/)를 사용하여서 연동할 수 있다.
+-   체크아웃 버튼 추가 방법과 차이점은 고객이 나의 웹사이트를 빠져나가지 않고 결제한다는 것이다.
+
+# 페이팔 테스트 사이트
+국내 대부분 PG사는 결제연동 테스트를 진행할 때, 실제 결제연동 모듈을 이용함.
+페이팔은 실제 연동 사이트와 테스트 사이트가 분리되어 있음
+테스트 사이트에서 판매자, 구매자 계정을 임시로 만들어서 테스트 가능
+
+> 테스트 사이트 : [www.sandbox.paypal.com](www.sandbox.paypal.com)
+
+## 테스트방법
+### 테스트 API 확인방법 - 아임포트를 사용할 경우에만 필요
+1.  테스트 사이트에서 Dashboard > Accounts 클릭
+
+2.  Type이 BUSINESS 이고, `facilitator`가 붙어있는 계정 > Profile 클릭
+
+3.  모달창에 API Credentials 탭에서 API 아이디, 패스워드, 서명 확인
+   
+#### 아임포트 사용하지 않고 직접 구현한 경우
+```javascript javascript
+paypal.Button.render({  
+ env: 'sandbox', // sandbox | production  
+    
+ client: {  
+ sandbox:    'sandbox key',	
+ production: 'production key'  
+ },  
+ ..
+ ```
+테스트모드에서는 `env`값을 sandbox로 설정한다. (env값은 설정파일로 모드로 지정할 수 있다.)
+실사용모드에서는 production로 설정.
+
+#### 테스트 계정 확인
+1.  페이팔 사이트 로그인
+2.  우측상단 이름 > Accounts 클릭
+3.  Sabbox > Accounts 클릭
+4.  각 타입과 이메일 주소(id) 확인
+> userid-facilitator@mail.com : BUSINESS 타입 계정
+>  userid-buyer@mailcom : PERSONAL 타입 계정
+
+##### 결제 화면에서 `PERSONAL` 타입으로 로그인하여 결제
+
+##### 결제 내역은 테스트 사이트 각각 테스트계정으로 로그인하여 테스트 내역 확인
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTE5OTczMTIwNTZdfQ==
+-->
