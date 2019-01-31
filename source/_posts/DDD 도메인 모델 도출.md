@@ -1,6 +1,6 @@
 --- 
 title : DDD 도메인 모델 도출
-tags: ["DDD"]
+tags : ["DDD"]
 ---
 
 ## 개념모델
