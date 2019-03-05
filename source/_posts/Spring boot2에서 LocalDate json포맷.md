@@ -21,8 +21,13 @@ protected LocalTime localTime;
 
 #### 결과
 ```json json
-
+{
+	localDate: "01-03-2019",
+	localDateTime1: "2019-03-01 17:39",
+	localDateTime2: "2019-03-01",
+	localTime: "19:35"
+}
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTU4OTgzMzA0LDE4Mjc3MjQyNzFdfQ==
+eyJoaXN0b3J5IjpbMTczNjg1ODM2MCwxODI3NzI0MjcxXX0=
 -->
