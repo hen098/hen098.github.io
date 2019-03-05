@@ -6,14 +6,18 @@ Spring Boot 2 버젼부턴 Java 8인 `LocalDate`, `LocalDatetime` JSON포맷팅 
 
 ```java java
 @JsonFormat(pattern="dd-MM-yyyy")
+protected LocalDate date;
 
 @JsonFormat(pattern="yyyy-MM-dd HH:mm")
+protected LocalDateTime date;
 
 @JsonFormat(pattern="yyyy-MM-dd")
+protected LocalDate date;
 
 @JsonFormat(pattern="HH:mm")
+protected LocalDateTime date;
 ```
 객체타입이 아닌 설정한 포맷팅으로 json으로 넘어간다.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgyNzcyNDI3MV19
+eyJoaXN0b3J5IjpbLTM0NTMzODY2OSwxODI3NzI0MjcxXX0=
 -->
