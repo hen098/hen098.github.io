@@ -15,9 +15,9 @@ protected LocalDateTime date;
 protected LocalDate date;
 
 @JsonFormat(pattern="HH:mm")
-protected LocalDateTime date;
+protected LocalTime date;
 ```
 객체타입이 아닌 설정한 포맷팅으로 json으로 넘어간다.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM0NTMzODY2OSwxODI3NzI0MjcxXX0=
+eyJoaXN0b3J5IjpbLTExMDM3NjI3MTksMTgyNzcyNDI3MV19
 -->
