@@ -1,5 +1,5 @@
 ---
-title: [Postman 활용] Runner로 자동 반복 호출 수행하기
+title: "Postman - Runner로 자동 반복 호출 수행하기"
 tags: ["postman"]
 ---
 Postman은 테스트도구로써 사용할 수 있다. 
