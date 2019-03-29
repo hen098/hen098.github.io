@@ -1,6 +1,6 @@
 ---
 title: "ModelMapper를 사용해서 도메인을 DTO로 매핑"
-tags: ["jpa"]
+tags: ["jpa","modelmapper"]
 ---
 
 JPA를 사용하면 도메인을 반환하는경우도 많다. 
