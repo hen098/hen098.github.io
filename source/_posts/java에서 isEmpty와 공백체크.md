@@ -1,3 +1,8 @@
+---
+title: java에서 isEmpty와 공백체크
+tags: ["java"]
+---
+
 String의 `isEmpty`사용
 ```
 "".isEmpty();					// true
