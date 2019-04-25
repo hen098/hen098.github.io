@@ -59,5 +59,5 @@ public class SwaggerConfig extends WebMvcConfigurationSupport {
 ### html에서 확인
 localhost:8080/swagger-ui.html 접속
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5MTM1MDY4Nl19
+eyJoaXN0b3J5IjpbLTUyNDIyMDMyNiwxNzkxMzUwNjg2XX0=
 -->
