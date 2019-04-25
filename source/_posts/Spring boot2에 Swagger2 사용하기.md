@@ -1,3 +1,7 @@
+---
+title: "Spring boot2에 Swagger2 사용하기"
+tags: ["java","springboot"]
+---
 API 단을 만들어 문서관리하는 것이 꼭 필요하다. 
 잦은 변화에 맞추어 수작업으로 문서를 변경하는 것은 번거로운 일이다.
 
