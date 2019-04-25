@@ -1,6 +1,6 @@
 ---
 title: Spring Boot 2버젼에서 LocalDate JSON 포매팅 방법
-tags: ["java"]
+tags: ["java","springboot"]
 ---
 Spring Boot 2 버젼부턴 Java 8인 `LocalDate`, `LocalDatetime` JSON포맷팅 문제를 어노테이션으로 해결할수 있다.
 #### 예제
