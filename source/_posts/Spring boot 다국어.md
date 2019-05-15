@@ -1,3 +1,8 @@
+---
+title : Spring Boot 다국어 설정
+tags: ["springboot"]
+---
+
 스프링부트는 다국어 설정을 지원한다. 이를 이용해서 API의 다국어 지원을 구현한다. 
 
 ## LocaleResolver
