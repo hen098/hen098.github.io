@@ -1,5 +1,5 @@
 ---
-title : Spring Boot 다국어 설정
+title : Spring Boot 다국어 설정 (1)
 tags: ["springboot"]
 ---
 
@@ -77,6 +77,7 @@ public void localetest(Locale locale) {
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MTY1NzU5MDQsMjgxNDAyNjIyLDE1Mz
-M5NzcwNzAsNDgxMzgzMTk2LC0zNDIxMzA2MTldfQ==
+eyJoaXN0b3J5IjpbMzYxMDkzNzYwLC0xNjE2NTc1OTA0LDI4MT
+QwMjYyMiwxNTMzOTc3MDcwLDQ4MTM4MzE5NiwtMzQyMTMwNjE5
+XX0=
 -->
