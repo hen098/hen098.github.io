@@ -5,6 +5,8 @@ tags: ["springboot"]
 
 스프링부트는 다국어 설정을 지원한다. 이를 이용해서 API의 다국어 지원을 구현한다. 
 
+다국어 설정에 대해 먼저 구현한다.
+
 ## LocaleResolver
 클라이언트의 언어&국거 정보를 인식할 클래스 
 Bean 등록 필요 
@@ -80,6 +82,6 @@ public void localetest(Locale locale) {
 지금 검증 valid 메시지 쓰고있음. 
 이것도 국제화 필요 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjgxNDAyNjIyLDE1MzM5NzcwNzAsNDgxMz
-gzMTk2LC0zNDIxMzA2MTldfQ==
+eyJoaXN0b3J5IjpbLTEwNzkxNDA2NzAsMjgxNDAyNjIyLDE1Mz
+M5NzcwNzAsNDgxMzgzMTk2LC0zNDIxMzA2MTldfQ==
 -->
