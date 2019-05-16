@@ -73,7 +73,13 @@ public void localetest(Locale locale) {
   log.trace(messageSource.getMessage("key", null, locale));  
 }
 ```
+
+
+[https://books.google.co.kr/books?id=RzLVBQAAQBAJ&pg=PA328&lpg=PA328&dq=reloadableresourcebundlemessagesource+web-inf&source=bl&ots=EN1jLxXT-R&sig=ACfU3U3XJFJKIpN-YTm75ugpso63IDFLoA&hl=ko&sa=X&ved=2ahUKEwi4osKrtp_iAhU4yYsBHXHDAJUQ6AEwCHoECAgQAQ#v=onepage&q=reloadableresourcebundlemessagesource%20web-inf&f=false](https://books.google.co.kr/books?id=RzLVBQAAQBAJ&pg=PA328&lpg=PA328&dq=reloadableresourcebundlemessagesource+web-inf&source=bl&ots=EN1jLxXT-R&sig=ACfU3U3XJFJKIpN-YTm75ugpso63IDFLoA&hl=ko&sa=X&ved=2ahUKEwi4osKrtp_iAhU4yYsBHXHDAJUQ6AEwCHoECAgQAQ#v=onepage&q=reloadableresourcebundlemessagesource%20web-inf&f=false)
+>> 빈 검증 국제화
+지금 검증 valid 메시지 쓰고있음. 
+이것도 국제화 필요 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUzMzk3NzA3MCw0ODEzODMxOTYsLTM0Mj
-EzMDYxOV19
+eyJoaXN0b3J5IjpbMjgxNDAyNjIyLDE1MzM5NzcwNzAsNDgxMz
+gzMTk2LC0zNDIxMzA2MTldfQ==
 -->
