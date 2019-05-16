@@ -58,6 +58,10 @@ public ReloadableResourceBundleMessageSource messageSource() {
 * basename 
 	* 다국어 정보를 정의한 properties 파일들이 들어있는 장소 
 	* 여러 properties가 들어있으면 여러개 정의 
+	* 절대 경로 사용 가능 
+``java java
+messageSource.setBasename("file:D:/message");
+	```
 
 ### 사용 (Controller)
 ```java java
@@ -70,5 +74,6 @@ public void localetest(Locale locale) {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDgxMzgzMTk2LC0zNDIxMzA2MTldfQ==
+eyJoaXN0b3J5IjpbMTAwODM0Njg2Nyw0ODEzODMxOTYsLTM0Mj
+EzMDYxOV19
 -->
