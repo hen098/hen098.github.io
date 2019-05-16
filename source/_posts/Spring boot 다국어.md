@@ -76,12 +76,7 @@ public void localetest(Locale locale) {
 }
 ```
 
-
-[https://books.google.co.kr/books?id=RzLVBQAAQBAJ&pg=PA328&lpg=PA328&dq=reloadableresourcebundlemessagesource+web-inf&source=bl&ots=EN1jLxXT-R&sig=ACfU3U3XJFJKIpN-YTm75ugpso63IDFLoA&hl=ko&sa=X&ved=2ahUKEwi4osKrtp_iAhU4yYsBHXHDAJUQ6AEwCHoECAgQAQ#v=onepage&q=reloadableresourcebundlemessagesource%20web-inf&f=false](https://books.google.co.kr/books?id=RzLVBQAAQBAJ&pg=PA328&lpg=PA328&dq=reloadableresourcebundlemessagesource+web-inf&source=bl&ots=EN1jLxXT-R&sig=ACfU3U3XJFJKIpN-YTm75ugpso63IDFLoA&hl=ko&sa=X&ved=2ahUKEwi4osKrtp_iAhU4yYsBHXHDAJUQ6AEwCHoECAgQAQ#v=onepage&q=reloadableresourcebundlemessagesource%20web-inf&f=false)
->> 빈 검증 국제화
-지금 검증 valid 메시지 쓰고있음. 
-이것도 국제화 필요 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNzkxNDA2NzAsMjgxNDAyNjIyLDE1Mz
+eyJoaXN0b3J5IjpbLTE2MTY1NzU5MDQsMjgxNDAyNjIyLDE1Mz
 M5NzcwNzAsNDgxMzgzMTk2LC0zNDIxMzA2MTldfQ==
 -->
