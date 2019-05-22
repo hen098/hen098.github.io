@@ -1,3 +1,5 @@
+---
+title: 
 프론트-서버 분리하여 개발하면 동일 출처 정책에 위배됨으로 CORS 문제가 발생할 수 있다.
 
 ## Same-origin policy
@@ -91,5 +93,5 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 ```
 필요에 의해서 corsConfigurationSource 부분의 origins, method, header 등을 설정한다. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA4MTU0MzgzM119
+eyJoaXN0b3J5IjpbODY1NTE4MDU2LDEwODE1NDM4MzNdfQ==
 -->
