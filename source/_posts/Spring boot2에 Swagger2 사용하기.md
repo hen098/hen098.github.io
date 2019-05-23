@@ -24,9 +24,9 @@ Spring Boot2 대 버젼은 Swagger2가 작동하지 않는 부분이 있다.
 (Spring Boot 방법으로 구현하면, 404 에러가 발생한다.)
 그래서 Spring Boot 설정방법이 아닌 부트를 사용하지 않는 방법으로 구현해야 한다.
 ```java java
-@Configuration  
+@Component 
 @EnableSwagger2  
-public class SwaggerConfig extends WebMvcConfigurationSupport {  
+public class SwaggerConfig extends WebMvcConfigurerAdapter {  
   @Bean  
   public Docket productApi() {  
   return new Docket(DocumentationType.SWAGGER_2)  
