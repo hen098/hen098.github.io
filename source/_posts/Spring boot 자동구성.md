@@ -1,5 +1,5 @@
 ---
-title: Spring Boot 설정 추가 
+title: Spring Boot자동구성 및 설정 추가 
 tags: ["springboot"]
 ---
 자동구성된 스프링에서 추가적인 조작만 하려면 다음과 같은 행태로 구성한다.
@@ -32,5 +32,5 @@ public class WebConfig {
 
 `@Component`는 클래스 상단에 선언하며, 클래스 자체를 bean으로 등록해준다. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkxNzI5NTExN119
+eyJoaXN0b3J5IjpbMTU2NDgxNjg4MCwxOTE3Mjk1MTE3XX0=
 -->
