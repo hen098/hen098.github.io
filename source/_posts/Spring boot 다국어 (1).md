@@ -67,6 +67,8 @@ public ReloadableResourceBundleMessageSource messageSource() {
 messageSource.setBasename("file:D:/message");
 ```
 
+# 2. me
+
 ### 사용 (Controller)
 ```java java
 @Autowired  
@@ -78,9 +80,8 @@ public void localetest(Locale locale) {
 }
 ```
 
-# 2. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU3NjAyNzYxNCwzNjEwOTM3NjAsLTE2MT
+eyJoaXN0b3J5IjpbMTcyMDAzMzY0MCwzNjEwOTM3NjAsLTE2MT
 Y1NzU5MDQsMjgxNDAyNjIyLDE1MzM5NzcwNzAsNDgxMzgzMTk2
 LC0zNDIxMzA2MTldfQ==
 -->
