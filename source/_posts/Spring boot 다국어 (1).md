@@ -67,7 +67,10 @@ public ReloadableResourceBundleMessageSource messageSource() {
 messageSource.setBasename("file:D:/message");
 ```
 
-# 2. me
+# 2. properties 파일 
+basename 설정한 것에 언어코드, 언어코드-국가코드 를 붙혀서 properties 파일을 생성한다. 
+## 예시 
+* 파일명 : per
 
 ### 사용 (Controller)
 ```java java
@@ -81,7 +84,7 @@ public void localetest(Locale locale) {
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcyMDAzMzY0MCwzNjEwOTM3NjAsLTE2MT
+eyJoaXN0b3J5IjpbMTk2MTk0MzQ1NywzNjEwOTM3NjAsLTE2MT
 Y1NzU5MDQsMjgxNDAyNjIyLDE1MzM5NzcwNzAsNDgxMzgzMTk2
 LC0zNDIxMzA2MTldfQ==
 -->
