@@ -1,5 +1,5 @@
 ---
-title: Spring Boot에서 COS 설정
+title: Spring Boot에서 CORS 설정
 tags: ["springboot", "cors"]
 ---
 
