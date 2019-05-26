@@ -70,7 +70,9 @@ messageSource.setBasename("file:D:/message");
 # 2. properties 파일 
 basename 설정한 것에 언어코드, 언어코드-국가코드 를 붙혀서 properties 파일을 생성한다. 
 ## 예시 
-* 파일명 : per
+* 파일명 : message_ko.properties & message_n.properties 
+* Accept-Language : ko / en 
+* 파일명 : message-ko-
 
 ### 사용 (Controller)
 ```java java
@@ -84,7 +86,7 @@ public void localetest(Locale locale) {
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk2MTk0MzQ1NywzNjEwOTM3NjAsLTE2MT
+eyJoaXN0b3J5IjpbLTQ2NjU0MzkxMSwzNjEwOTM3NjAsLTE2MT
 Y1NzU5MDQsMjgxNDAyNjIyLDE1MzM5NzcwNzAsNDgxMzgzMTk2
 LC0zNDIxMzA2MTldfQ==
 -->
