@@ -5,7 +5,7 @@ tags: ["springboot", "cors"]
 
 프론트-서버 분리하여 개발하면 동일 출처 정책에 위배됨으로 CORS 문제가 발생할 수 있다.
 
-## Same-origin policy
+## Same-origin policy (SOP)
 프로토컬, 도메인, 포트가 모두 같을시 동일 출처 정책을 따른다
 보통 api 사용할때, ajax에서 same-origin policy 를 따르지 않으면 오류가 나며 api 사용이 거절된다.
 한 사이트에서 여러 도메인을 가지고 있을 경우, 동일 출처 정책을 따르지 않기 때문에 문제가 생긴다.  
