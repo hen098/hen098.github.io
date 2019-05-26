@@ -77,17 +77,10 @@ MessageUtils.getMessage("key");
 ```
 
 
-
 ## 빈 검증 메시지 다국어 처리 
 형식 검증을 위해 @Valid 를 사용한다. 검증이 걸리면, 메시지를 반환하는데, 이 부분도 다국어가 되어야 한다. 
-컨트롤러에서 Locale 를 매개변수로 받고, 
+컨트롤러에서 Locale 를 매개변수로 받고, Accept-Language 필드를 전송하면, 자동으로 다국어 처리가 된 메세지를 반환한다. 
 
-> 아래 url 참고해서 구현
-
-[https://books.google.co.kr/books?id=RzLVBQAAQBAJ&pg=PA328&lpg=PA328&dq=reloadableresourcebundlemessagesource+web-inf&source=bl&ots=EN1jLxXT-R&sig=ACfU3U3XJFJKIpN-YTm75ugpso63IDFLoA&hl=ko&sa=X&ved=2ahUKEwi4osKrtp_iAhU4yYsBHXHDAJUQ6AEwCHoECAgQAQ#v=onepage&q=reloadableresourcebundlemessagesource%20web-inf&f=false](https://books.google.co.kr/books?id=RzLVBQAAQBAJ&pg=PA328&lpg=PA328&dq=reloadableresourcebundlemessagesource+web-inf&source=bl&ots=EN1jLxXT-R&sig=ACfU3U3XJFJKIpN-YTm75ugpso63IDFLoA&hl=ko&sa=X&ved=2ahUKEwi4osKrtp_iAhU4yYsBHXHDAJUQ6AEwCHoECAgQAQ#v=onepage&q=reloadableresourcebundlemessagesource%20web-inf&f=false)
->> 빈 검증 국제화
-지금 검증 valid 메시지 쓰고있음. 
-이것도 국제화 필요 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY5MDMxNDIzMiwyMjEzMTM2NDFdfQ==
+eyJoaXN0b3J5IjpbLTEwNzg3Njk3MjMsMjIxMzEzNjQxXX0=
 -->
