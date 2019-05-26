@@ -73,9 +73,9 @@ basename 설정한 것에 언어코드, 언어코드-국가코드 를 붙혀서 
 
 ## 예시 
 * 파일명 : message_ko.properties & message_en.properties > Accept-Language : ko / en 
-* 파일명 : message_ko_KR.prope
+* 파일명 : message_ko_KR.properties & message_en_US.properties > Accept-Language : ko-KR / en-US
 
-### 사용 (Controller)
+# 3. 사용 (Controller)
 ```java java
 @Autowired  
 MessageSource messageSource;
@@ -87,7 +87,7 @@ public void localetest(Locale locale) {
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNDU0MjU2MzgsMzYxMDkzNzYwLC0xNj
-E2NTc1OTA0LDI4MTQwMjYyMiwxNTMzOTc3MDcwLDQ4MTM4MzE5
-NiwtMzQyMTMwNjE5XX0=
+eyJoaXN0b3J5IjpbMTczMzg2ODk4MywzNjEwOTM3NjAsLTE2MT
+Y1NzU5MDQsMjgxNDAyNjIyLDE1MzM5NzcwNzAsNDgxMzgzMTk2
+LC0zNDIxMzA2MTldfQ==
 -->
