@@ -14,7 +14,7 @@ tags: ["springboot", "cors"]
 자원을 외부 도메인에서 접근을 허용해주는 메커니즘
 Same-origin policy와 반대되는 개념
 
-### 동작 과정
+### CORS동작 과정
 1. pre-flight request : OPTIONS 메소드 요청을 수행하고, 가능한지 확인
 2. 실제 요청 
 
