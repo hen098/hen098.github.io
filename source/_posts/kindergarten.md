@@ -1,4 +1,5 @@
-이 글은 Kindergarten 
+이 글은 Kindergarten github readme, 예제 영문 설명을 참고하여 작성한 내용이다. 예제설명은 번역한 내용이 대부분이다. 
+
 # Kindergarten 
 프론트에서 인증인가를 책임져 주는 플러그인이다. 
 권한에 따라 버튼의 visible까지 구현할 수 있다. 
@@ -17,7 +18,7 @@ Perimeter는 Sandbox안에 연결되어있으며, 메소드들은 Sandbox 통해
 Sandbox의 보초이다. Child가 어떤 권한없는 활동을 하지 못하도록 한다. 
 
 ## Child
-어플리케이션의 현재 사용자들이다. 
+어플리케이션의 현재 사용자이다. 
 
 ## 예제 
 Vue + Vuex + VueRouter + vue-kindergarten 
@@ -161,5 +162,5 @@ export default class RouteGoverness extends HeadGoverness {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTExMjY3MDIwLC0xMTgwMjA5NTQyXX0=
+eyJoaXN0b3J5IjpbLTg5MDE2ODI5MSwtMTE4MDIwOTU0Ml19
 -->
