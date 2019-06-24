@@ -1,11 +1,13 @@
-> vue-kindergarten github
-> [https://github.com/JiriChara/vue-kindergarten](https://github.com/JiriChara/vue-kindergarten)
-
 > 예제 
 [Role Based Authorization 설명](https://codeburst.io/role-based-authorization-for-your-vue-js-and-nuxt-js-applications-using-vue-kindergarten-fd483e013ec5) 
 github url : https://github.com/martinhbramwell/vue-kindergarten-example.git
 
 Vue + Vuex + VueRouter + vue-kindergarten
+
+# Kindergarten 
+프론트에서 인증인가를 책임져 주는 플러그인이다. 
+어떤 긴
+[vue-kindergarten github](https://github.com/JiriChara/vue-kindergarten)
 
 ## Perimeter
 Perimeter는 어플리케이션 내부 권한별 기능, 메소드 범위를 정의하는 모듈이다. (특정 컴포넌트, 페이지, 버튼, 헤더 등..). 
@@ -157,5 +159,6 @@ export default class RouteGoverness extends HeadGoverness {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExODAyMDk1NDJdfQ==
+eyJoaXN0b3J5IjpbLTE1ODU4MzQ4NjYsLTExODAyMDk1NDJdfQ
+==
 -->
