@@ -1,8 +1,4 @@
-> 예제 
-
-
-
-
+이 글은 Kindergarten 
 # Kindergarten 
 프론트에서 인증인가를 책임져 주는 플러그인이다. 
 권한에 따라 버튼의 visible까지 구현할 수 있다. 
@@ -25,14 +21,15 @@ Sandbox의 보초이다. Child가 어떤 권한없는 활동을 하지 못하도
 
 ## 예제 
 Vue + Vuex + VueRouter + vue-kindergarten 
-를 결합해서 사용한 예제를 보고 참고했다. github 소스 뿐 아니라, 자세하게 설명한 포스팅글도 있어서 도움이 많이 되
+를 결합해서 사용한 예제를 보고 참고했다. github 소스 뿐 아니라, 자세하게 설명한 포스팅글도 있어서 도움이 많이 되었다. 
 github url : https://github.com/martinhbramwell/vue-kindergarten-example.git
 [Role Based Authorization 설명](https://codeburst.io/role-based-authorization-for-your-vue-js-and-nuxt-js-applications-using-vue-kindergarten-fd483e013ec5) 
 
-## 예제 설명
+### 예제 내용
+localhost:3000 에서 
 ```
 Hello 클릭 > Admin만 Secret 화면 접근 가능
-Bye 클릭 > Admin만 특정 문구 보임
+Bye 클릭 > Admin만 특정 문구 보임 
 ```
 
 ### Perimeter 
@@ -164,5 +161,5 @@ export default class RouteGoverness extends HeadGoverness {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk1NzEyMzYxNSwtMTE4MDIwOTU0Ml19
+eyJoaXN0b3J5IjpbNTExMjY3MDIwLC0xMTgwMjA5NTQyXX0=
 -->
