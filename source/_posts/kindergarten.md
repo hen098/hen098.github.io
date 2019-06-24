@@ -1,7 +1,8 @@
---
+---
 title: "Kindergarten - Vue cli에서 인증인가
 tags: ["vue", "kindergarten"]
---
+---
+
 이 글은 Kindergarten github readme, 예제 영문 설명을 참고하여 작성한 내용이다. 예제설명은 번역한 내용이 대부분이다. 
 
 # Kindergarten 
@@ -166,6 +167,6 @@ export default class RouteGoverness extends HeadGoverness {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk5NjgwMjY0Niw2NzU3NTE4NDMsLTExOD
+eyJoaXN0b3J5IjpbLTM4OTkyNjUzNiw2NzU3NTE4NDMsLTExOD
 AyMDk1NDJdfQ==
 -->
