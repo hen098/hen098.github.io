@@ -76,8 +76,8 @@ export default new BasePerimeter({
 });
 ```
 
-### Child > 현재 사용자 
-추출하는 방법이 필요하다. 예제에서는 store에 저장된 user 사용
+### Child 
+현재 사용자를 추출하는 방법이 필요하다. 예제에서는 store에 저장된 user 사용
 ```javascript 
 // src/child.js
 
@@ -102,7 +102,7 @@ export default store => (store ? store.state.user.info : null);
 ```
 혹은 아래처럼 작성할 수 있다. `$bye`는 perimeter의 purpose 이다. `viewParagraph`가 각각 정의된 여러 perimeter들을 로딩했다면 이처럼 사용한다. 
 
-```vue
+```html html
 <p v-show="$bye.isAllowed('viewParagraph')">This paragraph is secret!</p>
 ```
 
@@ -162,5 +162,5 @@ export default class RouteGoverness extends HeadGoverness {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg5MDE2ODI5MSwtMTE4MDIwOTU0Ml19
+eyJoaXN0b3J5IjpbNjc1NzUxODQzLC0xMTgwMjA5NTQyXX0=
 -->
