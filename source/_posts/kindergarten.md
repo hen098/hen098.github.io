@@ -1,5 +1,5 @@
 ---
-title: "Kindergarten - Vue cli에서 인증인가
+title: "Kindergarten - Vue cli에서 인증인가"
 tags: ["vue", "kindergarten"]
 ---
 
@@ -167,6 +167,6 @@ export default class RouteGoverness extends HeadGoverness {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM4OTkyNjUzNiw2NzU3NTE4NDMsLTExOD
-AyMDk1NDJdfQ==
+eyJoaXN0b3J5IjpbLTc5MDc2ODE0LC0zODk5MjY1MzYsNjc1Nz
+UxODQzLC0xMTgwMjA5NTQyXX0=
 -->
