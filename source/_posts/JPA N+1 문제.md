@@ -41,5 +41,6 @@ Page<Post> findAllByPostType(@Param("postType") Post.PostType postType, @Param("
 * fetch 쪽에 별칭을 사용하지 않는다.
 * `countQuery`가 필요하다.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2NTc1NjU0NywxNTExMDMzODY0XX0=
+eyJoaXN0b3J5IjpbMTcwNDkxMTYwOCwxNTY1NzU2NTQ3LDE1MT
+EwMzM4NjRdfQ==
 -->
