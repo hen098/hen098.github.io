@@ -1,3 +1,8 @@
+---
+title: "Value Collection을 JPA로 구현"
+tags: ["jpa", "DDD"]
+---
+
 # 밸류 컬렉션 테이블 매핑 
 밸류 컬렉션을 RDB와 매핑하는 방법은 세 가지가 있다. 
 
