@@ -28,13 +28,13 @@ Order를 조회 시, select 문 1개가 날아갈 것 으로 예상된다.
 
 ```java
 @Query(value = "select distinct p from Post p left join fetch p.attachments " +  
-  "where .. order by p.lastModifiedDateTime desc",  
+  "where p.postType =:postType and p.title like concat('%', :title, '%') order by p.lastModifiedDateTime desc",  
   countQuery = "select count(p) from Post p")  
-Page<Post> findAllByPostType(Pageable pageable);
+Page<Post> findAllByPostType(@Param("postType") Post.PostType postType, @Param("title") String title, Pageable pageable);
 ```
 * join 뒤에 fetch를 붙힌다.
 * fetch 쪽에 별칭을 사용하지 않는다.
 * `countQuery`가 필요하다.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxMTAzMzg2NF19
+eyJoaXN0b3J5IjpbMTU2NTc1NjU0NywxNTExMDMzODY0XX0=
 -->
