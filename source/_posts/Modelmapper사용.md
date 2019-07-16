@@ -28,7 +28,40 @@ public class WebConfig implements WebMvcConfigurer {
 }
 ```
 
-
+### MapperUtils
+Util로 만들어서 생성하지 않고 사용하도록 만든다. 
+```java
+@Component  
+public class MapperUtils {  
+  static ModelMapper modelMapper;  
+  
+  public MapperUtils(ModelMapper modelMapper) {  
+  this.modelMapper = modelMapper;  
+  // AccessLevel을 필드로 해서 setter가 없어도 매핑되도록 한다. 
+  // modelmap
+  this.modelMapper.getConfiguration()  
+  .setFieldAccessLevel(Configuration.AccessLevel.PRIVATE)  
+  .setFieldMatchingEnabled(true);  
+  }  
+  
+  public static <D> D convert(Object source, Class<D> classLiteral) {  
+  return modelMapper.map(source, classLiteral);  
+  }  
+  
+  public static <D, E> List<D> convert(Collection<E> sourceList, Class<D> classLiteral) {  
+  return sourceList.stream()  
+  .map(source -> modelMapper.map(source, classLiteral))  
+  .collect(Collectors.toList());  
+  }  
+  
+  public static <D, E> Page<D> convert(Page<E> sourceList, Class<D> classLiteral, Pageable pageable) {  
+  List<D> list = sourceList.getContent().stream()  
+  .map(source -> modelMapper.map(source, classLiteral))  
+  .collect(Collectors.toList());  
+  return new PageImpl<>(list, pageable, sourceList.getTotalElements());  
+  }  
+}
+```
 
 ### User.java
 도메인
@@ -57,6 +90,6 @@ public class UserDto {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc2NzgwNDQ0NiwtMTMxOTk2NzA3NywtND
-I1NjU4MjM0XX0=
+eyJoaXN0b3J5IjpbLTIxMzQxMzc2NTMsLTc2NzgwNDQ0NiwtMT
+MxOTk2NzA3NywtNDI1NjU4MjM0XX0=
 -->
