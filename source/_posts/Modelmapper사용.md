@@ -17,7 +17,18 @@ compile('org.modelmapper:modelmapper:0.7.8')
 ```
 
 ### WebConfig
-```ㅓㅁ
+Bean 등록 
+```java
+@Configuration
+public class WebConfig implements WebMvcConfigurer {
+  @Bean  
+  public ModelMapper modelMapper() {  
+  return new ModelMapper();  
+  }  
+}
+```
+
+
 
 ### User.java
 도메인
@@ -46,6 +57,6 @@ public class UserDto {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcxMjEwMzczNywtMTMxOTk2NzA3NywtND
+eyJoaXN0b3J5IjpbLTc2NzgwNDQ0NiwtMTMxOTk2NzA3NywtND
 I1NjU4MjM0XX0=
 -->
