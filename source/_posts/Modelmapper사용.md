@@ -1,14 +1,14 @@
 ---
 title: "ModelMapper를 사용해서 도메인을 DTO로 매핑"
-tags: ["jpa","modelmapper"]
+tags: ["jpa","modelmapper", "DTO"]
 ---
-
-도메인은 비즈니스 업무를 포함한다. 
-그럼으로, 반환값으로 도메인(Entity와 Value Object)을 사용하는 것은 비즈니스가 노출될 위험이 있다. 
+# DTO와 Entity
+도메인(Entity)은 비즈니스 업무를 포함한다. 
+그럼으로, 반환값으로 도메인(Entity)을 사용하는 것은 비즈니스가 노출될 위험이 있다. 
 
 ModelMapper와 Java 8 문법을 사용하면, 간략하게 DTO를 사용할 수 있다. 
 
-## 방법
+# 구현방법
 
 ### build.gradle
 ```
@@ -68,6 +68,7 @@ public class MapperUtils {
 
 
 ### 사용 - Controller
+DTO를 Entity로 반환하거나, Entity를 DTO로 반환할ㄸ
 ```java
 // 객체를 객체로 반환 
 MapperUtils.convert(postDto, Post.class);
@@ -80,6 +81,6 @@ MapperUtils.convert(posts, PostResponse.class);
 MapperUtils.convert(posts, PostResponse.class, pageable)
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMzExMjQ2ODgsLTc2NzgwNDQ0NiwtMT
-MxOTk2NzA3NywtNDI1NjU4MjM0XX0=
+eyJoaXN0b3J5IjpbMjA2OTQ2MDY2MSwtNzY3ODA0NDQ2LC0xMz
+E5OTY3MDc3LC00MjU2NTgyMzRdfQ==
 -->
