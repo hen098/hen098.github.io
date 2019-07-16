@@ -8,6 +8,10 @@ tags: ["jpa","modelmapper", "DTO"]
 
 ModelMapper와 Java 8 문법을 사용하면, 간략하게 DTO를 사용할 수 있다. 
 
+## DTO 
+요청과 응답 dto가 다를수 있다. 
+
+
 # 구현방법
 
 ### build.gradle
@@ -65,10 +69,11 @@ public class MapperUtils {
 
 ### XXXDto.java 
 * 도메인과 같은 타입, 변수명으로 선언해야 ModelMapper로 자동매핑할 수 있다.
-
+* DB에서 불러온 값을 반환하는 DTO는 습관적인 Setter 구현을 지양한다.
 
 ### 사용 - Controller
-DTO를 Entity로 반환하거나, Entity를 DTO로 반환할ㄸ
+DTO를 Entity로 반환하거나, Entity를 DTO로 반환할 때 사용한다. 
+
 ```java
 // 객체를 객체로 반환 
 MapperUtils.convert(postDto, Post.class);
@@ -81,6 +86,6 @@ MapperUtils.convert(posts, PostResponse.class);
 MapperUtils.convert(posts, PostResponse.class, pageable)
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2OTQ2MDY2MSwtNzY3ODA0NDQ2LC0xMz
-E5OTY3MDc3LC00MjU2NTgyMzRdfQ==
+eyJoaXN0b3J5IjpbMjg1NjQ0NzkwLC03Njc4MDQ0NDYsLTEzMT
+k5NjcwNzcsLTQyNTY1ODIzNF19
 -->
