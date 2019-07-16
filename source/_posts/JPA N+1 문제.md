@@ -1,6 +1,6 @@
 ---
 title: "JPA 쿼리 N+1문제"
-tags: ["JPA"]
+tags: ["jpa"]
 ---
 
 # JPA N+1문제
@@ -41,6 +41,6 @@ Page<Post> findAllByPostType(@Param("postType") Post.PostType postType, @Param("
 * fetch 쪽에 별칭을 사용하지 않는다.
 * `countQuery`가 필요하다.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcwNDkxMTYwOCwxNTY1NzU2NTQ3LDE1MT
-EwMzM4NjRdfQ==
+eyJoaXN0b3J5IjpbMTE4ODc5NzE0NCwxNzA0OTExNjA4LDE1Nj
+U3NTY1NDcsMTUxMTAzMzg2NF19
 -->
