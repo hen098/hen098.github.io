@@ -90,9 +90,17 @@ public class UserDto {
 
 ### 사용 - Controller
 ```java
+// 객체를 객체로 반환 
+MapperUtils.convert(postDto, Post.class);
+MapperUtils.convert(post, PostDto.class);
 
+// 리스트를 리스트로 반환
+MapperUtils.convert(posts, PostResponse.class);	
+
+// 페이징된 객체를 페이징된 객체로 반환
+MapperUtils.convert(posts, PostResponse.class, pageable)
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc1NDM0MjkyMSwtNzY3ODA0NDQ2LC0xMz
+eyJoaXN0b3J5IjpbMTUwNjkyNTIyOSwtNzY3ODA0NDQ2LC0xMz
 E5OTY3MDc3LC00MjU2NTgyMzRdfQ==
 -->
