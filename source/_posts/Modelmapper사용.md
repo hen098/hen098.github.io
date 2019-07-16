@@ -16,6 +16,9 @@ ModelMapper와 Java 8 문법을 사용하면, 간략하게 DTO를 사용할 수 
 compile('org.modelmapper:modelmapper:0.7.8')
 ```
 
+### WebConfig
+```ㅓㅁ
+
 ### User.java
 도메인
 ```java java
@@ -40,28 +43,9 @@ public class UserDto {
 }
 ```
 
-### Service.java
-```java java
-import org.modelmapper.ModelMapper;
 
-public class UserService {
-	@NonNull  
-	private ModelMapper modelMapper;
 
-	@NonNull  
-	private UserRepository userRepository;
-
-	public Page<UserDto> getAllUsers(String type, String search, Pageable pageable) {  
-	  Page<User> user = this.userRepository.findAllByEmailContaining(search, pageable);  
-	  
-	  List<UserDto> list = user.getContent()  
-	  .stream()  
-	  .map(i -> modelMapper.map(i, UserResponse.class)).collect(Collectors.toList());  
-	  
-	  return new PageImpl<>(list, pageable, user.getTotalElements());  
-	}
-}
-```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMTk5NjcwNzcsLTQyNTY1ODIzNF19
+eyJoaXN0b3J5IjpbLTcxMjEwMzczNywtMTMxOTk2NzA3NywtND
+I1NjU4MjM0XX0=
 -->
