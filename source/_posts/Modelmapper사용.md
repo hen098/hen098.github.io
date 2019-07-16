@@ -37,8 +37,9 @@ public class MapperUtils {
   
   public MapperUtils(ModelMapper modelMapper) {  
   this.modelMapper = modelMapper;  
+  
   // AccessLevel을 필드로 해서 setter가 없어도 매핑되도록 한다. 
-  // modelmap
+  // modelmapper는 디폴트로 setter를 통해서 aceess한다.
   this.modelMapper.getConfiguration()  
   .setFieldAccessLevel(Configuration.AccessLevel.PRIVATE)  
   .setFieldMatchingEnabled(true);  
@@ -87,9 +88,11 @@ public class UserDto {
 }
 ```
 
+### 사용 - Controller
+```java
 
-
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMzQxMzc2NTMsLTc2NzgwNDQ0NiwtMT
-MxOTk2NzA3NywtNDI1NjU4MjM0XX0=
+eyJoaXN0b3J5IjpbMTc1NDM0MjkyMSwtNzY3ODA0NDQ2LC0xMz
+E5OTY3MDc3LC00MjU2NTgyMzRdfQ==
 -->
