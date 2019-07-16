@@ -10,7 +10,9 @@ ModelMapper와 Java 8 문법을 사용하면, 간략하게 DTO를 사용할 수 
 
 ## DTO 
 요청과 응답 dto가 다를수 있다. 
+XXRequest와 XXResponse로 따로 만들어서 사용할 수 있다. 
 
+Request는 표현영역 값 검증 어노테이션을 포함한다. 
 
 # 구현방법
 
@@ -86,6 +88,6 @@ MapperUtils.convert(posts, PostResponse.class);
 MapperUtils.convert(posts, PostResponse.class, pageable)
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjg1NjQ0NzkwLC03Njc4MDQ0NDYsLTEzMT
-k5NjcwNzcsLTQyNTY1ODIzNF19
+eyJoaXN0b3J5IjpbMTU4MDk0Mjc2OSwtNzY3ODA0NDQ2LC0xMz
+E5OTY3MDc3LC00MjU2NTgyMzRdfQ==
 -->
