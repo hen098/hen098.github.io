@@ -96,5 +96,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 ```
 필요에 의해서 corsConfigurationSource 부분의 origins, method, header 등을 설정한다. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQzMTY1MDMsMTA4MTU0MzgzM119
+eyJoaXN0b3J5IjpbLTY4MTc0Nzg3MSwtNDMxNjUwMywxMDgxNT
+QzODMzXX0=
 -->
