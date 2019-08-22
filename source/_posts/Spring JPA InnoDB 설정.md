@@ -21,8 +21,8 @@ InnoDB를 사용하기 위해서 설정 수정
 application.yml
 ```yml
 jpa:
-  properties.hibernate:  
-	 dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+  properties.hibernate:
+    dialect: org.hibernate.dialect.MySQL5InnoDBDialect
 ```
 
 <!--stackedit_data:
