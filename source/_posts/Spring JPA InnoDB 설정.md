@@ -1,7 +1,7 @@
---
+---
 title: "Spring Boot JPA InnoDB 설정"
 tags: ["jpa","mysql"]
---
+---
 # MySQL의 Storage Engine
 ## 가장 많이 사용하는 엔진
 ###  MyISAM
@@ -26,5 +26,5 @@ jpa:
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE5MzcwMjg4XX0=
+eyJoaXN0b3J5IjpbLTIxMjI1NDc4NzYsMjE5MzcwMjg4XX0=
 -->
