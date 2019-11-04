@@ -1,7 +1,7 @@
 --
 title: "의존성 주입(DI)"
 tags: ["spring"]
----
+--
 
 ## Bean 
 스프링 컨테이너 상에서 생성된 객체 
@@ -27,5 +27,5 @@ tags: ["spring"]
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjI1NTY3MjhdfQ==
+eyJoaXN0b3J5IjpbLTE2NDU0NjMsLTExNjI1NTY3MjhdfQ==
 -->
