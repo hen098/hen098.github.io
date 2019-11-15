@@ -1,5 +1,9 @@
+---
+title: "[vue] 자식에서 부모 데이터 통신"
+tags: ["vue"]
+---
 
-## 부모 - 자식 간 양방향 통신 
+## 자식 > 부모 통신 
 
 ### `.sync` 수식어
 > Vue2.3 +
@@ -48,5 +52,5 @@ export default {
 참고
 [https://medium.com/@jeongwooahn/vue-js-%EC%96%91%EB%B0%A9%ED%96%A5-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%B0%94%EC%9D%B8%EB%94%A9-%ED%99%9C%EC%9A%A9-%EB%AA%A8%EB%8B%AC-%EB%A0%88%EC%9D%B4%EC%96%B4%ED%8C%9D%EC%97%85-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0%EB%A5%BC-%ED%86%B5%ED%95%98%EC%97%AC-%EC%95%8C%EC%95%84%EB%B3%B4%EA%B8%B0-sync-4e2a5cf70dc4](https://medium.com/@jeongwooahn/vue-js-%EC%96%91%EB%B0%A9%ED%96%A5-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%B0%94%EC%9D%B8%EB%94%A9-%ED%99%9C%EC%9A%A9-%EB%AA%A8%EB%8B%AC-%EB%A0%88%EC%9D%B4%EC%96%B4%ED%8C%9D%EC%97%85-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0%EB%A5%BC-%ED%86%B5%ED%95%98%EC%97%AC-%EC%95%8C%EC%95%84%EB%B3%B4%EA%B8%B0-sync-4e2a5cf70dc4)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEyNzc3OTYyNCwxMTQzNzg3NjQyXX0=
+eyJoaXN0b3J5IjpbNTA1OTUzNjYzLDExNDM3ODc2NDJdfQ==
 -->
