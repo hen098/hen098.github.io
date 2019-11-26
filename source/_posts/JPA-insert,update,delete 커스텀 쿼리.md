@@ -1,4 +1,7 @@
--
+---
+title : "JPA - insert,update,delete 커스텀 쿼리 작성"
+tags: ["jpa"]
+---
 JPA에서 insert, update, delete custom 쿼리를 작성할 때, 아래처럼 수행한다.
 
 ```java
@@ -20,5 +23,5 @@ insert, update, delete의 경우 `@Transactional` 항상 필요하다.
 
 참고 [https://codar.club/blogs/5cd7f06bec80a.html](https://codar.club/blogs/5cd7f06bec80a.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMjE5NzMyMjEsMTA1ODIwODA4OF19
+eyJoaXN0b3J5IjpbMjEzMTc4MTg4MSwxMDU4MjA4MDg4XX0=
 -->
