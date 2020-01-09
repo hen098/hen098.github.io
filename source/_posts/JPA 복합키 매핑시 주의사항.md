@@ -1,5 +1,5 @@
 ---
-title : "JPA 복합키 매핑시 주의사항"
+title : "JPA 복합키 조인시 주의사항"
 tags: ["jpa"]
 ---
 JPA 에서 복합키에 대해 JOIN COLUMN을 아래와 같이 설정해줬었다. 
@@ -31,5 +31,5 @@ private Parent parent;
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNTQxMjUzODddfQ==
+eyJoaXN0b3J5IjpbMjIwMDU5NjQyLC0xMTU0MTI1Mzg3XX0=
 -->
