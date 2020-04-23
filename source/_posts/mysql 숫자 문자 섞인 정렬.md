@@ -20,3 +20,6 @@ eyJoaXN0b3J5IjpbLTE4MTc5NTcyNjBdfQ==
 ```sql
 ORDER BY COL_NAME*1
 ```
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbOTk3Njc4MDQ5XX0=
+-->
