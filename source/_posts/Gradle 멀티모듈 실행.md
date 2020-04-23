@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "Gradle 멀티 모듈 실행"
 tags: ["multi module", "gradle"]
 ---
 
@@ -53,5 +53,5 @@ public class AdminApiApplication {
 `scanBasePackages` 부분이 없으면 실행했을 때 에러가 발생한다. 
 이부분이 있어야 다른 모듈의 bean 주입을 사용가능하다. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMjg3Mjg4OTBdfQ==
+eyJoaXN0b3J5IjpbODYxOTUxMDcwLC0yMDI4NzI4ODkwXX0=
 -->
