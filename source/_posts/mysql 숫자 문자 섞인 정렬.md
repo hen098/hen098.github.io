@@ -7,9 +7,16 @@ tags: ["mysql", "order by"]
 
 이럴때 해결방법
 
+### 1번
 ```sql 
 ORDER BY LENGTH(COL_NAME), COL_NAME
 ```
 <!--stackedit_data:
 eyJoaXN0b3J5IjpbLTE4MTc5NTcyNjBdfQ==
 -->
+
+
+### 2번
+```sql
+ORDER BY COL_NAME*1
+```
