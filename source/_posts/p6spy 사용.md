@@ -16,7 +16,7 @@ implementation 'com.github.gavlyukovskiy:p6spy-spring-boot-starter:1.6.1'
 ```yaml
 spring:
   jpa:
-	url: jdbc:p6spy:mysql:'url~~~'	# (1)
+    url: jdbc:p6spy:mysql:'url~~~'	# (1)
     driverClassName: com.p6spy.engine.spy.P6SpyDriver	#(2)
 ```
 
