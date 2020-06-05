@@ -169,7 +169,10 @@ public class ExcelGenerator {
 }
 ```
 
-
+참고 
+[https://grokonez.com/spring-framework/spring-boot/excel-file-download-from-springboot-restapi-apache-poi-mysql](https://grokonez.com/spring-framework/spring-boot/excel-file-download-from-springboot-restapi-apache-poi-mysql)
+[https://grokonez.com/spring-framework/spring-boot/excel-file-upload-download-using-apache-poi-springboot-restapis-spring-jpa-thymeleaf-to-mysql](https://grokonez.com/spring-framework/spring-boot/excel-file-upload-download-using-apache-poi-springboot-restapis-spring-jpa-thymeleaf-to-mysql)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MDEzNDU4ODddfQ==
+eyJoaXN0b3J5IjpbLTE0ODQzODYxNjUsLTE2MDEzNDU4ODddfQ
+==
 -->
