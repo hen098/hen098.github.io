@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.8.0">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="title: “Excel-Rest API + poi”
+tags: [“poi”, “excel”]엑셀 모듈 추가build.gradle12// poi  compile group: &#39;org.apache.poi&#39;, name: &#39;poi-ooxml&#39;, version: &#39;3.9&#39;
+파">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Hen&#39;s blog">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Study">
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="title: “Excel-Rest API + poi”
+tags: [“poi”, “excel”]엑셀 모듈 추가build.gradle12// poi  compile group: &#39;org.apache.poi&#39;, name: &#39;poi-ooxml&#39;, version: &#39;3.9&#39;
+파">
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Study">
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="website">
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://hen098.github.comhttp://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg">
+    
+
+        <meta name="twitter:card" content="summary_large_image">
+
+    
+
+    
+        <meta name="twitter:image" content="https://hen098.github.comhttp://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg">
+    
+
+    <!-- Title -->
+    
+    <title>Study</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Configurable Title</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/klugjo/hexo-theme-clean-blog">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Untitled</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2020-06-17
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <hr>
+<p>title: “Excel-Rest API + poi”</p>
+<h2 id="tags-“poi”-“excel”"><a href="#tags-“poi”-“excel”" class="headerlink" title="tags: [“poi”, “excel”]"></a>tags: [“poi”, “excel”]</h2><h2 id="엑셀-모듈-추가"><a href="#엑셀-모듈-추가" class="headerlink" title="엑셀 모듈 추가"></a>엑셀 모듈 추가</h2><h3 id="build-gradle"><a href="#build-gradle" class="headerlink" title="build.gradle"></a>build.gradle</h3><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">//</span> <span class="string">poi</span>  </span><br><span class="line"><span class="string">compile</span> <span class="attr">group:</span> <span class="string">'org.apache.poi'</span><span class="string">,</span> <span class="attr">name:</span> <span class="string">'poi-ooxml'</span><span class="string">,</span> <span class="attr">version:</span> <span class="string">'3.9'</span></span><br></pre></td></tr></table></figure>
+<h2 id="파일-다운로드-노출-헤더-설정"><a href="#파일-다운로드-노출-헤더-설정" class="headerlink" title="파일 다운로드 - 노출 헤더 설정"></a>파일 다운로드 - 노출 헤더 설정</h2><p><code>CONTENT_DISPOSITION</code>에 파일명과 확장자를 담아서 반환해야 하는데, 기본적으로 해당 헤더는 브라우저에서 접근이 불가능한 헤더이다. </p>
+<p>아래와 같은 설정을 해주어야 브라우저에서 접근이 가능하다. </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Bean</span>  </span><br><span class="line"><span class="function"><span class="keyword">public</span> CorsConfigurationSource <span class="title">corsConfigurationSource</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">    CorsConfiguration configuration = <span class="keyword">new</span> CorsConfiguration();  </span><br><span class="line">  configuration.addAllowedOrigin(mappingUrl);  </span><br><span class="line">  configuration.addAllowedMethod(<span class="string">"*"</span>);  </span><br><span class="line">  configuration.addAllowedHeader(<span class="string">"*"</span>);  </span><br><span class="line">  configuration.setAllowCredentials(<span class="keyword">true</span>);  </span><br><span class="line">  configuration.setMaxAge(<span class="number">3600L</span>);  </span><br><span class="line">  </span><br><span class="line">  configuration.setExposedHeaders(Arrays.asList(<span class="string">"Content-Disposition"</span>));  <span class="comment">// 해당 헤더 노출 설정</span></span><br><span class="line">  </span><br><span class="line">  UrlBasedCorsConfigurationSource source = <span class="keyword">new</span> UrlBasedCorsConfigurationSource();  </span><br><span class="line">  source.registerCorsConfiguration(<span class="string">"/**"</span>, configuration);  </span><br><span class="line">  </span><br><span class="line"> <span class="keyword">return</span> source;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Excel-기능-구현"><a href="#Excel-기능-구현" class="headerlink" title="Excel 기능 구현"></a>Excel 기능 구현</h2><ul>
+<li>데이터 &gt; 엑셀 파일로 변환 <h3 id="Controller"><a href="#Controller" class="headerlink" title="Controller"></a>Controller</h3></li>
+<li><p>header에 <code>CONTENT_DISPOSITION</code>로 파일명.확장자 담음</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**  </span></span><br><span class="line"><span class="comment"> * 지원자 정보 엑셀 다운로드  </span></span><br><span class="line"><span class="comment">  *  </span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> condition  </span></span><br><span class="line"><span class="comment">  * <span class="doctag">@return</span>  </span></span><br><span class="line"><span class="comment">  */</span>  </span><br><span class="line"><span class="meta">@PostMapping</span>(<span class="string">"/excel/applicants"</span>)  </span><br><span class="line"><span class="function"><span class="keyword">public</span> ResponseEntity&lt;InputStreamResource&gt; <span class="title">applicantsExcelFileDown</span><span class="params">(@RequestBody ApplSearchCondition condition)</span> </span>&#123;  </span><br><span class="line">    FileDto excel = excelService.applicantsExcelFileDown(condition);  </span><br><span class="line">  </span><br><span class="line"> <span class="keyword">return</span> ResponseEntity.ok()  </span><br><span class="line">            .header(HttpHeaders.CONTENT_DISPOSITION, <span class="string">"attachment; filename="</span> + excel.getFileName() + <span class="string">".xlsx"</span>)  </span><br><span class="line">            .body(excel.getResource());  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>엑셀 파일 &gt; Map 변환 </p>
+<ul>
+<li>Map을 다시 데이터(Object로 변환하고 싶었지만, 매핑하는 간단한 방법 못 찾음)</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ExcelGenerator</span> </span>&#123;  </span><br><span class="line">  </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> &lt;E&gt; <span class="function">ByteArrayInputStream <span class="title">dataToExcel</span><span class="params">(String[] columns, List&lt;E&gt; dataList)</span> </span>&#123;  </span><br><span class="line">        <span class="keyword">try</span>(  </span><br><span class="line">                ByteArrayOutputStream out = <span class="keyword">new</span> ByteArrayOutputStream();  </span><br><span class="line">  )&#123;  </span><br><span class="line">            Workbook workbook = <span class="keyword">new</span> XSSFWorkbook();  </span><br><span class="line">  CreationHelper createHelper = workbook.getCreationHelper();  </span><br><span class="line">  </span><br><span class="line">  Sheet sheet = workbook.createSheet();  </span><br><span class="line">  </span><br><span class="line">  Font headerFont = workbook.createFont();  </span><br><span class="line"><span class="comment">//            headerFont.setColor(IndexedColors.BLUE.getIndex());   // Header 폰트 색 변경  </span></span><br><span class="line">  headerFont.setFontName(<span class="string">"맑은 고딕"</span>);  </span><br><span class="line">  headerFont.setBoldweight(Font.BOLDWEIGHT_BOLD);  </span><br><span class="line">  </span><br><span class="line">  CellStyle headerCellStyle = workbook.createCellStyle();  </span><br><span class="line">  headerCellStyle.setFont(headerFont);  </span><br><span class="line">  <span class="comment">// Background 색 채움  </span></span><br><span class="line">  headerCellStyle.setFillForegroundColor(IndexedColors.GREY_25_PERCENT.getIndex());  </span><br><span class="line">  headerCellStyle.setFillPattern(CellStyle.SOLID_FOREGROUND);  </span><br><span class="line">  </span><br><span class="line">  <span class="comment">// Row for Header  </span></span><br><span class="line">  Row headerRow = sheet.createRow(<span class="number">0</span>);  </span><br><span class="line">  </span><br><span class="line">  <span class="comment">// Header  </span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> col = <span class="number">0</span>; col &lt; columns.length; col++) &#123;  </span><br><span class="line">                Cell cell = headerRow.createCell(col);  </span><br><span class="line">  cell.setCellValue(columns[col]);  </span><br><span class="line">  cell.setCellStyle(headerCellStyle);  </span><br><span class="line">  &#125;  </span><br><span class="line">  </span><br><span class="line">            ObjectMapper oMapper = <span class="keyword">new</span> ObjectMapper();  </span><br><span class="line">  </span><br><span class="line"> <span class="keyword">int</span> rowIdx = <span class="number">1</span>;  </span><br><span class="line"> <span class="keyword">for</span> (E data : dataList) &#123;  </span><br><span class="line">                Row row = sheet.createRow(rowIdx++);  </span><br><span class="line">  </span><br><span class="line">  Map&lt;String, Object&gt; map = oMapper.convertValue(data, Map.class);  </span><br><span class="line">  </span><br><span class="line"> <span class="keyword">int</span> columnIdx = <span class="number">0</span>;  </span><br><span class="line"> <span class="keyword">for</span> (String key : map.keySet())&#123;  </span><br><span class="line">                    row.createCell(columnIdx++).setCellValue(map.get(key).toString());  </span><br><span class="line">  &#125;  </span><br><span class="line">            &#125;  </span><br><span class="line">  </span><br><span class="line">            workbook.write(out);  </span><br><span class="line"> <span class="keyword">return</span> <span class="keyword">new</span> ByteArrayInputStream(out.toByteArray());  </span><br><span class="line">  &#125; <span class="keyword">catch</span> (IOException e) &#123;  </span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> ExcelIOException(<span class="string">"엑셀 파일 생성을 실패했습니다."</span>);  </span><br><span class="line">  &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">  </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> List&lt;Map&lt;String, Object&gt;&gt; excelToData(InputStream is) &#123;  </span><br><span class="line">        <span class="keyword">try</span>&#123;  </span><br><span class="line">            Workbook workbook = <span class="keyword">new</span> XSSFWorkbook(is);  </span><br><span class="line">  </span><br><span class="line">  Sheet sheet = workbook.getSheetAt(<span class="number">0</span>);  </span><br><span class="line">  Iterator&lt;Row&gt; rows = sheet.iterator();  </span><br><span class="line">  List&lt;Map&lt;String, Object&gt;&gt; maps = <span class="keyword">new</span> ArrayList&lt;&gt;();  </span><br><span class="line">  </span><br><span class="line">  <span class="comment">// header  </span></span><br><span class="line">  String[] header = getHeader(sheet.getRow(<span class="number">0</span>));  </span><br><span class="line">  </span><br><span class="line"> <span class="keyword">int</span> rowIdx = <span class="number">0</span>;  </span><br><span class="line"> <span class="keyword">while</span> (rows.hasNext()) &#123;  </span><br><span class="line">                Row currentRow = rows.next();  </span><br><span class="line">  </span><br><span class="line">  <span class="comment">// skip header  </span></span><br><span class="line">  <span class="keyword">if</span>(rowIdx == <span class="number">0</span>) &#123;  </span><br><span class="line">                    rowIdx++;  </span><br><span class="line"> <span class="keyword">continue</span>;  &#125;  </span><br><span class="line">  </span><br><span class="line">                Iterator&lt;Cell&gt; cellsInRow = currentRow.iterator();  </span><br><span class="line">  Map&lt;String, Object&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();  </span><br><span class="line">  </span><br><span class="line"> <span class="keyword">int</span> cellIdx = <span class="number">0</span>;  </span><br><span class="line"> <span class="keyword">while</span> (cellsInRow.hasNext()) &#123;  </span><br><span class="line">                    Cell currentCell = cellsInRow.next();  </span><br><span class="line">  </span><br><span class="line">  map.put(header[cellIdx], currentCell.getStringCellValue());  </span><br><span class="line">  cellIdx++;  </span><br><span class="line">  &#125;  </span><br><span class="line">  </span><br><span class="line">                maps.add(map);  </span><br><span class="line">  &#125;  </span><br><span class="line">  </span><br><span class="line">            <span class="keyword">return</span> maps;  </span><br><span class="line">  &#125; <span class="keyword">catch</span> (IOException e) &#123;  </span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> ExcelIOException(<span class="string">"엑셀 파일 읽기를 실패했습니다."</span>);  </span><br><span class="line">  &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">  </span><br><span class="line">    <span class="comment">/**  </span></span><br><span class="line"><span class="comment"> * 엑셀 에서 헤더 추출  </span></span><br><span class="line"><span class="comment">  *  </span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> row  </span></span><br><span class="line"><span class="comment">  * <span class="doctag">@return</span>  </span></span><br><span class="line"><span class="comment">  */</span>  </span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">static</span> String[] getHeader(Row row) &#123;  </span><br><span class="line">        List&lt;String&gt; headers = <span class="keyword">new</span> ArrayList&lt;&gt;();  </span><br><span class="line"> <span class="keyword">for</span>(Cell cell : row) &#123;  </span><br><span class="line">            headers.add(cell.getStringCellValue());  </span><br><span class="line">  &#125;  </span><br><span class="line">        <span class="keyword">return</span> headers.toArray(<span class="keyword">new</span> String[headers.size()]);  </span><br><span class="line">  &#125;  </span><br><span class="line">  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="참고"><a href="#참고" class="headerlink" title="참고"></a>참고</h3><p><a href="https://grokonez.com/spring-framework/spring-boot/excel-file-download-from-springboot-restapi-apache-poi-mysql" target="_blank" rel="noopener">https://grokonez.com/spring-framework/spring-boot/excel-file-download-from-springboot-restapi-apache-poi-mysql</a></p>
+<p><a href="https://grokonez.com/spring-framework/spring-boot/excel-file-upload-download-using-apache-poi-springboot-restapis-spring-jpa-thymeleaf-to-mysql" target="_blank" rel="noopener">https://grokonez.com/spring-framework/spring-boot/excel-file-upload-download-using-apache-poi-springboot-restapis-spring-jpa-thymeleaf-to-mysql</a><br><!--stackedit_data:
+eyJoaXN0b3J5IjpbLTQ3MDQ5MjE0MiwtMTQ4NDM4NjE2NSwtMT
+YwMTM0NTg4N119
+--></p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/klugjo/hexo-theme-clean-blog" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2020 Hen&#39;s blog<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.8.0">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="개념모델데이터베이스, 트랜잭션 처리, 성능, 구현 기술과 같은 것들 고려하지않고, 업무 관점에서 작성한다. 
+개념 모델을 구현 가능한 형태로 전환하는 과정을 거쳐야 한다. 
+처음부터 완벽구현은 불가능하다. 분류하고 계획한 후, 수정, 보완의 과정을 거쳐서 점진적으로 구">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Hen&#39;s blog">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="DDD 도메인 모델 도출">
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="개념모델데이터베이스, 트랜잭션 처리, 성능, 구현 기술과 같은 것들 고려하지않고, 업무 관점에서 작성한다. 
+개념 모델을 구현 가능한 형태로 전환하는 과정을 거쳐야 한다. 
+처음부터 완벽구현은 불가능하다. 분류하고 계획한 후, 수정, 보완의 과정을 거쳐서 점진적으로 구">
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Study">
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article">
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://hen098.github.comhttp://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg">
+    
+
+        <meta name="twitter:card" content="summary_large_image">
+
+    
+
+    
+        <meta name="twitter:image" content="https://hen098.github.comhttp://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg">
+    
+
+    <!-- Title -->
+    
+    <title>DDD 도메인 모델 도출 - Study</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Configurable Title</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/klugjo/hexo-theme-clean-blog">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>DDD 도메인 모델 도출</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2020-06-17
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/DDD/">#DDD</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h2 id="개념모델"><a href="#개념모델" class="headerlink" title="개념모델"></a>개념모델</h2><p>데이터베이스, 트랜잭션 처리, 성능, 구현 기술과 같은 것들 고려하지않고, 업무 관점에서 작성한다. </p>
+<p>개념 모델을 구현 가능한 형태로 <strong>전환</strong>하는 과정을 거쳐야 한다. </p>
+<p>처음부터 완벽구현은 불가능하다. 분류하고 계획한 후, 수정, 보완의 과정을 거쳐서 점진적으로 구현모델로 발전시켜나가야 한다. </p>
+<h1 id="도메인-모델-도출"><a href="#도메인-모델-도출" class="headerlink" title="도메인 모델 도출"></a>도메인 모델 도출</h1><ul>
+<li><p>도메인을 이해한다. (기획서, 유스케이스, 사용자스토리 등 활용) </p>
+<ul>
+<li>유스케이스<blockquote>
+<p>유스케이서 명세서 : 사용자와 기능 사이에 일어나는 과정들</p>
+<pre><code>유스케이스 장점 : 요구사항을 추상화 (도식화)
+</code></pre></blockquote>
+</li>
+<li>사용자스토리 <blockquote>
+<p>장점 : flow를 볼수 있다.</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>핵심 구성요소, 규칙, 기능 찾기 &gt; 요구사항에서 출발 </p>
+</li>
+<li>도메인 모델 초안 작성한다.</li>
+<li>특정 툴(수단-화이트보다, 종이와 연필, 모델링 툴)에 종속되지 않는다. </li>
+</ul>
+<h2 id="도메인-초안-작성"><a href="#도메인-초안-작성" class="headerlink" title="도메인 초안 작성"></a>도메인 초안 작성</h2><p>책에선 java로 작성했다. </p>
+<blockquote>
+<p>도메인전문가가 java를 안다는 전제하에 작성했다. </p>
+</blockquote>
+<h3 id="밸류-DTO"><a href="#밸류-DTO" class="headerlink" title="밸류 = DTO"></a>밸류 = DTO</h3><p>값을 담는 그릇. 밸류 타입으로 완전한 하나의 개념으로 만들 수 있다.<br>프레젠테이션 계층과 도메인 계층이 데이터를 주고받을 때 사용하는 구조체이다.</p>
+<ul>
+<li>map 방식</li>
+<li>VO 방식</li>
+</ul>
+<p>p.24</p>
+<h4 id="int-price-라고-int형을-쓸수도-있지만-Money-price-라고-선언한-이유"><a href="#int-price-라고-int형을-쓸수도-있지만-Money-price-라고-선언한-이유" class="headerlink" title="int price 라고 int형을 쓸수도 있지만, Money price 라고 선언한 이유?"></a><code>int price</code> 라고 <code>int</code>형을 쓸수도 있지만, <code>Money price</code> 라고 선언한 이유?</h4><p><code>Money</code>클래스안에 <code>int value</code> 하나만 선언되었지만, <code>int price</code>라고 쓰는 것보다 <code>Money price</code> 라고 선언했다.<br>의미있는 추상화 활동이다. 그로인해 가독성이 높아졌다. </p>
+<h4 id="불변-타입으로-구현-데이터-변경-불가능"><a href="#불변-타입으로-구현-데이터-변경-불가능" class="headerlink" title="불변 타입으로 구현 - 데이터 변경 불가능"></a>불변 타입으로 구현 - 데이터 변경 불가능</h4><p>밸류 객체 데이터 변경할 때 기존 데이터를 변경하기보다는(set method) 변경한 데이터를 갖는 새로운 밸류 객체를 생성하는 방식을 선호한다.<br><figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Money</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">int</span> value;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> Money <span class="title">add</span><span class="params">(Money money)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">new</span> Money(<span class="keyword">this</span>.value + money.value);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>set 메소드로 값을 잘못 변경하게되는 상황을 방지한다. </p>
+<h3 id="엔터티"><a href="#엔터티" class="headerlink" title="엔터티"></a>엔터티</h3><p>레코드를 구분하는 식별자를 갖는다.</p>
+<h4 id="식별자"><a href="#식별자" class="headerlink" title="식별자"></a>식별자</h4><ul>
+<li>특정 규칙에 따라 생성 - 보통 String 타입. 체계 필요. 채번테이블이 필요. 중간에 구멍이 있을수도 있음</li>
+<li>UUID - random 값</li>
+<li>값을 직접 입력 - id, email 등. 중복/인증 필요</li>
+<li>일련번호 사용 - Double, Int 타입. 쉽고 빠르지만 체계를 가질수 없음</li>
+</ul>
+<h3 id="도메인-모델에-set-메소드-넣지-않기"><a href="#도메인-모델에-set-메소드-넣지-않기" class="headerlink" title="도메인 모델에 set 메소드 넣지 않기"></a>도메인 모델에 set 메소드 넣지 않기</h3><p>도메인 모델에 get/set 메서드를 무조건 추가하는 것은 좋지 않은 버릇이다. </p>
+<p>어떤 전용으로 값을 변경하는 메소드로 만든다.<br><figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Order</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setShippingInfo</span><span class="params">(ShippingInfo newShipping)</span> </span>&#123; .. &#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setOrderState</span><span class="params">(OrderState)</span></span>&#123; .. &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>set 메소드가 없는 도메인에 값을 세팅하는 방법은 <strong>생성자</strong>이다.</p>
+<h4 id="생성자를-구현해서-생성시점에-필요한-데이터-전송"><a href="#생성자를-구현해서-생성시점에-필요한-데이터-전송" class="headerlink" title="생성자를 구현해서, 생성시점에 필요한 데이터 전송"></a>생성자를 구현해서, 생성시점에 필요한 데이터 전송</h4><p>생성할 때 최초로 값을 세팅해준다. 불변 타입이 된다. public한 일반적인 set메소드가 아닌, 전용 목적 메소드로만 값을 변경한다. </p>
+<p>set메소드를 가지는 경우도 있다. </p>
+<h4 id="set-메소드"><a href="#set-메소드" class="headerlink" title="set 메소드"></a>set 메소드</h4><figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">setOrderer</span><span class="params">(Orderer order)</span> </span>&#123;</span><br><span class="line">	..</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>private</code>으로 내부에서 데이터를 변경할 목적으로 사용된다. 품질을 위해서 아무나 접근하여 변경가능하지 않도록 구현한다.</p>
+<h3 id="도메인-용어"><a href="#도메인-용어" class="headerlink" title="도메인 용어"></a>도메인 용어</h3><p>가독성을 위해서 바로 이해할 수 있는 용어를 적용한다.<br><figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">enum</span> OrderState &#123;</span><br><span class="line">	PAYMENT_WAITING, PREPARING, SHIPPED, DELIVERING, DELIVERY_COMPLETED;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTQyMDMyNzEzMl19
+-->
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/klugjo/hexo-theme-clean-blog" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2020 Hen&#39;s blog<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

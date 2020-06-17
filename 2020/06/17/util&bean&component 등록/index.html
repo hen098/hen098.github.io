@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.8.0">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Util관행
+상태가 없음
+생성자 없음
+
+Bean 등록개발자가 컨트롤이 불가능한 외부 라이브러리를 사용한 경우반환하는 객체를 Bean으로 만듬 
+Component 등록개발자가 직접 구현한 경우선언된 클래스를 Bean으로 만듬
+직접구현한 것을 Bean 으로 등록해도 괜찮을">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Hen&#39;s blog">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="bean/component등록 &amp;util">
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Util관행
+상태가 없음
+생성자 없음
+
+Bean 등록개발자가 컨트롤이 불가능한 외부 라이브러리를 사용한 경우반환하는 객체를 Bean으로 만듬 
+Component 등록개발자가 직접 구현한 경우선언된 클래스를 Bean으로 만듬
+직접구현한 것을 Bean 으로 등록해도 괜찮을">
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Study">
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article">
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://hen098.github.comhttp://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg">
+    
+
+        <meta name="twitter:card" content="summary_large_image">
+
+    
+
+    
+        <meta name="twitter:image" content="https://hen098.github.comhttp://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg">
+    
+
+    <!-- Title -->
+    
+    <title>bean/component등록 &amp;util - Study</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Configurable Title</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/klugjo/hexo-theme-clean-blog">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>bean/component등록 &util</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2020-06-17
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/spring/">#spring</a> <a href="/tags/bean/">#bean</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h2 id="Util"><a href="#Util" class="headerlink" title="Util"></a>Util</h2><h4 id="관행"><a href="#관행" class="headerlink" title="관행"></a>관행</h4><ul>
+<li>상태가 없음</li>
+<li>생성자 없음</li>
+</ul>
+<h2 id="Bean-등록"><a href="#Bean-등록" class="headerlink" title="Bean 등록"></a>Bean 등록</h2><p>개발자가 컨트롤이 불가능한 외부 라이브러리를 사용한 경우<br>반환하는 객체를 Bean으로 만듬 </p>
+<h2 id="Component-등록"><a href="#Component-등록" class="headerlink" title="Component 등록"></a>Component 등록</h2><p>개발자가 직접 구현한 경우<br>선언된 클래스를 Bean으로 만듬</p>
+<h3 id="직접구현한-것을-Bean-으로-등록해도-괜찮을까-No"><a href="#직접구현한-것을-Bean-으로-등록해도-괜찮을까-No" class="headerlink" title="직접구현한 것을 Bean 으로 등록해도 괜찮을까 ? No"></a>직접구현한 것을 Bean 으로 등록해도 괜찮을까 ? No</h3><p><code>@Bean</code>과 <code>@Component</code> 는 각각 선언할 수 있는 타입이 정해져있어 용도외에 선언은 컴파일 에러를 발생시킨다.</p>
+<ul>
+<li>@Component : class에만 선언 가능</li>
+<li>@Bean : 메소드에 선언 가능</li>
+</ul>
+<h2 id="ModelMapper를-사용할-때-예"><a href="#ModelMapper를-사용할-때-예" class="headerlink" title="ModelMapper를 사용할 때 - 예"></a>ModelMapper를 사용할 때 - 예</h2><h3 id="원하는-것"><a href="#원하는-것" class="headerlink" title="원하는 것"></a>원하는 것</h3><ol>
+<li>ModelMapper 사용</li>
+<li>인스턴스를 1개만 생성 </li>
+<li>modelmapper 메소드를 구현부마다 작성하지않음 (wrapping)</li>
+</ol>
+<h3 id="구현"><a href="#구현" class="headerlink" title="구현"></a>구현</h3><ol>
+<li>Modelmapper @Bean 등록</li>
+<li>CustomModelMapper 구현<br>ModelMapper를 주입받고 감싸서 구현 </li>
+<li>사용 </li>
+</ol>
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTk4MjE3NDIxMl19
+-->
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/klugjo/hexo-theme-clean-blog" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2020 Hen&#39;s blog<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

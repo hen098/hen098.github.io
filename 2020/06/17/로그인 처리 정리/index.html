@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.8.0">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="로그인일반적인 로그인 시나리오로 작성한다.
+로그인 시나리오로그인을 시도한다.
+POSTURL : /login
+
+성공실패 케이스
+존재하지 않는 사용자
+InternalAuthenticationServiceException
+
+
+유효하지 않은 사용자
+DisabledExcepti">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Hen&#39;s blog">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="로그인 프로세스 정리">
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="로그인일반적인 로그인 시나리오로 작성한다.
+로그인 시나리오로그인을 시도한다.
+POSTURL : /login
+
+성공실패 케이스
+존재하지 않는 사용자
+InternalAuthenticationServiceException
+
+
+유효하지 않은 사용자
+DisabledExcepti">
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Study">
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article">
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://hen098.github.comhttp://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg">
+    
+
+        <meta name="twitter:card" content="summary_large_image">
+
+    
+
+    
+        <meta name="twitter:image" content="https://hen098.github.comhttp://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg">
+    
+
+    <!-- Title -->
+    
+    <title>로그인 프로세스 정리 - Study</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Configurable Title</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/klugjo/hexo-theme-clean-blog">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>로그인 프로세스 정리</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2020-06-17
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/java/">#java</a> <a href="/tags/springsecurity/">#springsecurity</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="로그인"><a href="#로그인" class="headerlink" title="로그인"></a>로그인</h1><p>일반적인 로그인 시나리오로 작성한다.</p>
+<h2 id="로그인-시나리오"><a href="#로그인-시나리오" class="headerlink" title="로그인 시나리오"></a>로그인 시나리오</h2><h3 id="로그인을-시도한다"><a href="#로그인을-시도한다" class="headerlink" title="로그인을 시도한다."></a>로그인을 시도한다.</h3><blockquote>
+<p>POST<br>URL : /login</p>
+</blockquote>
+<h3 id="성공"><a href="#성공" class="headerlink" title="성공"></a>성공</h3><h3 id="실패-케이스"><a href="#실패-케이스" class="headerlink" title="실패 케이스"></a>실패 케이스</h3><ol>
+<li>존재하지 않는 사용자<ul>
+<li><code>InternalAuthenticationServiceException</code></li>
+</ul>
+</li>
+<li>유효하지 않은 사용자<ul>
+<li><code>DisabledException</code> </li>
+</ul>
+</li>
+<li>비밀번호 실패<ul>
+<li><code>BadCredentialsException</code></li>
+<li>비밀번호 실패횟수 + 1</li>
+<li>실패 기준 횟수 초과시에 계정잠금 (lock 컬럼을 true로) </li>
+</ul>
+</li>
+<li>계정잠김<ul>
+<li><code>LockedException</code></li>
+<li>front 에서 받아서 캡챠화면으로 이동 </li>
+</ul>
+</li>
+</ol>
+<h3 id="구현"><a href="#구현" class="headerlink" title="구현"></a>구현</h3><h4 id="로그인-서비스-메소드"><a href="#로그인-서비스-메소드" class="headerlink" title="로그인 서비스 메소드"></a>로그인 서비스 메소드</h4><figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> JwtAuthenticationResponse <span class="title">login</span><span class="params">(String userId, String password)</span> </span>&#123;  </span><br><span class="line">  Authentication authentication = <span class="keyword">null</span>;  </span><br><span class="line">  UserPrincipal userPrincipal = <span class="keyword">null</span>;  </span><br><span class="line">  </span><br><span class="line">  <span class="keyword">try</span> &#123;  </span><br><span class="line">  authentication = <span class="keyword">this</span>.authenticationManager.authenticate(  </span><br><span class="line">  <span class="keyword">new</span> UsernamePasswordAuthenticationToken(userId, password)  </span><br><span class="line"> );  </span><br><span class="line">  </span><br><span class="line">  userPrincipal = (UserPrincipal) authentication.getPrincipal();  </span><br><span class="line">  </span><br><span class="line">  <span class="keyword">if</span>(userPrincipal.getSocialSignup()) <span class="comment">// 소셜회원은 일반로그인 불가능  </span></span><br><span class="line">  <span class="keyword">throw</span> <span class="keyword">new</span> InvalidUserException(MessageUtils.getMessage(<span class="string">"CANNOT_LOGIN_SOCIAL_USER"</span>));  </span><br><span class="line">  &#125; <span class="keyword">catch</span> (InternalAuthenticationServiceException e)&#123; <span class="comment">// 존재하지 않는 사용자  </span></span><br><span class="line">  <span class="keyword">throw</span> <span class="keyword">new</span> UserNotFoundException(MessageUtils.getMessage(<span class="string">"USER_NOT_FOUND"</span>));  </span><br><span class="line">  &#125; <span class="keyword">catch</span>(DisabledException e) &#123; <span class="comment">// 유효한 회원이 아님  </span></span><br><span class="line">  <span class="keyword">throw</span> <span class="keyword">new</span> InvalidUserException(MessageUtils.getMessage(<span class="string">"INVALID_USER"</span>));  </span><br><span class="line">  &#125; <span class="keyword">catch</span> (BadCredentialsException e) &#123;<span class="comment">// 비밀번호 실패  </span></span><br><span class="line">  <span class="keyword">this</span>.failPassword(userId);  </span><br><span class="line">  <span class="keyword">throw</span> <span class="keyword">new</span> BadCredentialsException(MessageUtils.getMessage(<span class="string">"FAIL_PASSWORD"</span>));  </span><br><span class="line">  &#125; <span class="keyword">catch</span>(LockedException e) &#123; <span class="comment">// 계정 잠김  </span></span><br><span class="line">  <span class="keyword">throw</span> <span class="keyword">new</span> UserLockException(userId, MessageUtils.getMessage(<span class="string">"REQUIRED_CAPTCHA"</span>));  </span><br><span class="line">  &#125;  </span><br><span class="line">  </span><br><span class="line">  SecurityContextHolder.getContext().setAuthentication(authentication);  </span><br><span class="line">  String jwt = <span class="keyword">this</span>.tokenProvider.generateToken(authentication);  </span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> JwtAuthenticationResponse(jwt, userPrincipal.getEmail(),  </span><br><span class="line">  userPrincipal.getId(),userPrincipal.getAuthorities(), userPrincipal.getNickname(),  </span><br><span class="line">  userPrincipal.getProfilePath());  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="API-요청시-JWT-필터-처리"><a href="#API-요청시-JWT-필터-처리" class="headerlink" title="API 요청시 JWT 필터 처리"></a>API 요청시 JWT 필터 처리</h2><h3 id="실패-케이스-1"><a href="#실패-케이스-1" class="headerlink" title="실패 케이스"></a>실패 케이스</h3><ol>
+<li>존재하지 않는 사용자</li>
+<li>유효하지 않은 사용자 </li>
+</ol>
+<h3 id="구현-1"><a href="#구현-1" class="headerlink" title="구현"></a>구현</h3><h4 id="스프링시큐리티-설정-WebSecurityConfig-java"><a href="#스프링시큐리티-설정-WebSecurityConfig-java" class="headerlink" title="스프링시큐리티 설정 - WebSecurityConfig.java"></a>스프링시큐리티 설정 - WebSecurityConfig.java</h4><figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@NonNull</span>  </span><br><span class="line"><span class="keyword">private</span> JwtAuthenticationFilter jwtAuthenticationFilter;</span><br><span class="line"></span><br><span class="line"><span class="meta">@NonNull</span>  </span><br><span class="line"><span class="keyword">private</span> JwtAuthenticationEntryPoint unauthorizationHander;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Override</span>  </span><br><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">configure</span><span class="params">(HttpSecurity http)</span> <span class="keyword">throws</span> Exception </span>&#123;  </span><br><span class="line">  http</span><br><span class="line">  .addFilterBefore(jwtAuthenticationFilter, AnonymousAuthenticationFilter.class)</span><br><span class="line">  .exceptionHandling()  </span><br><span class="line">  .authenticationEntryPoint(unauthorizationHander)  </span><br><span class="line">  .and()</span><br><span class="line">  ..</span><br></pre></td></tr></table></figure>
+<p>API 요청시마다 jwt필터를 먼저 거친다.</p>
+<h4 id="JwtAuthenticationFilter-java"><a href="#JwtAuthenticationFilter-java" class="headerlink" title="JwtAuthenticationFilter.java"></a>JwtAuthenticationFilter.java</h4><figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span>  </span><br><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doFilterInternal</span><span class="params">(HttpServletRequest request,  </span></span></span><br><span class="line"><span class="function"><span class="params">  HttpServletResponse response,  </span></span></span><br><span class="line"><span class="function"><span class="params">  FilterChain filterChain)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;  </span><br><span class="line">  String jwt = getJwtFromRequest(request);  </span><br><span class="line">  <span class="keyword">try</span> &#123;  </span><br><span class="line">  <span class="keyword">if</span> (StringUtils.hasText(jwt) &amp;&amp; <span class="keyword">this</span>.tokenProvider.validateToken(jwt)) &#123;  </span><br><span class="line">  String userId = <span class="keyword">this</span>.tokenProvider.getUserIdFromJWT(jwt);  </span><br><span class="line">  UserDetails userDetails = <span class="keyword">this</span>.customUserDetailsService.loadUserByUsername(userId);  </span><br><span class="line">  </span><br><span class="line">  <span class="keyword">if</span> (!userDetails.isEnabled())  </span><br><span class="line">  <span class="keyword">throw</span> <span class="keyword">new</span> InvalidUserException(MessageUtils.getMessage(<span class="string">"INVALID_USER"</span>));  </span><br><span class="line">  </span><br><span class="line">  UsernamePasswordAuthenticationToken authenticationToken =  </span><br><span class="line">  <span class="keyword">new</span> UsernamePasswordAuthenticationToken(userDetails, <span class="keyword">null</span>, userDetails.getAuthorities());  </span><br><span class="line">  authenticationToken.setDetails(  </span><br><span class="line">  <span class="keyword">new</span> WebAuthenticationDetailsSource()  </span><br><span class="line">  .buildDetails(request));  </span><br><span class="line">  SecurityContextHolder.getContext().setAuthentication(authenticationToken);  </span><br><span class="line">  &#125;  </span><br><span class="line"> &#125; <span class="keyword">catch</span>(RuntimeException e) &#123;  </span><br><span class="line">  SecurityContextHolder.clearContext();  </span><br><span class="line">  &#125;  </span><br><span class="line">  </span><br><span class="line">  filterChain.doFilter(request, response);  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line"><span class="function"><span class="keyword">private</span> String <span class="title">getJwtFromRequest</span><span class="params">(HttpServletRequest request)</span> </span>&#123;  </span><br><span class="line">  String bearerToken = request.getHeader(<span class="string">"Authorization"</span>);  </span><br><span class="line">  </span><br><span class="line">  <span class="keyword">if</span> (StringUtils.hasText(bearerToken) &amp;&amp; bearerToken.startsWith(<span class="string">"Bearer "</span>)) &#123;  </span><br><span class="line">  <span class="keyword">return</span> bearerToken.substring(<span class="number">7</span>);  </span><br><span class="line">  &#125;  </span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">null</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>JwtAuthenticationFilter</code>안에서 exception이 발생하면 <code>JwtAuthenticationEntryPoint</code>에서 처리된다.</p>
+<h4 id="JwtAuthenticationEntryPoint-java"><a href="#JwtAuthenticationEntryPoint-java" class="headerlink" title="JwtAuthenticationEntryPoint.java"></a>JwtAuthenticationEntryPoint.java</h4><figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Component</span>  </span><br><span class="line"><span class="meta">@Slf</span>4j  </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JwtAuthenticationEntryPoint</span> <span class="keyword">implements</span> <span class="title">AuthenticationEntryPoint</span> </span>&#123;  </span><br><span class="line">  </span><br><span class="line">  <span class="meta">@Override</span>  </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">commence</span><span class="params">(HttpServletRequest request,  </span></span></span><br><span class="line"><span class="function"><span class="params">  HttpServletResponse response,  </span></span></span><br><span class="line"><span class="function"><span class="params">  AuthenticationException authException)</span> <span class="keyword">throws</span> IOException, ServletException </span>&#123;  </span><br><span class="line">  log.error(<span class="string">"Unauthorized Error: &#123;&#125;"</span>, authException.getMessage());  </span><br><span class="line">  response.sendError(  </span><br><span class="line">  HttpServletResponse.SC_UNAUTHORIZED,  </span><br><span class="line">  MessageUtils.getMessage(<span class="string">"UNAUTHORIZED_ACCESS"</span>)  </span><br><span class="line"> );  </span><br><span class="line">  &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="공통-사용"><a href="#공통-사용" class="headerlink" title="공통 사용"></a>공통 사용</h2><figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Service</span>  </span><br><span class="line"><span class="meta">@RequiredArgsConstructor</span>(onConstructor = @__(<span class="meta">@Autowired</span>))  </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CustomUserDetailsService</span> <span class="keyword">implements</span> <span class="title">UserDetailsService</span> </span>&#123;  </span><br><span class="line">  </span><br><span class="line">  <span class="meta">@Value</span>(<span class="string">"$&#123;login.failMaxCnt&#125;"</span>)  </span><br><span class="line">  <span class="keyword">private</span> Integer failMaxCnt;  </span><br><span class="line">  </span><br><span class="line">  <span class="meta">@NonNull</span>  </span><br><span class="line">  <span class="keyword">private</span> UserService userService;  </span><br><span class="line">  </span><br><span class="line">  <span class="meta">@Override</span>  </span><br><span class="line"> <span class="meta">@Transactional</span>(readOnly = <span class="keyword">true</span>)  </span><br><span class="line">  <span class="function"><span class="keyword">public</span> UserDetails <span class="title">loadUserByUsername</span><span class="params">(String email)</span> </span>&#123;  </span><br><span class="line">  User user = <span class="keyword">this</span>.userService.findByUserId(email);  </span><br><span class="line">  </span><br><span class="line">  Collection&lt;GrantedAuthority&gt; grantedAuthorities = user.getRoles().stream()  </span><br><span class="line">  .map(role -&gt; <span class="keyword">new</span> SimpleGrantedAuthority(role.getType().name()))  </span><br><span class="line">  .collect(Collectors.toList());  </span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> UserPrincipal(user.getUserNo().getId(), user.getEmail(), user.getPassword(),  </span><br><span class="line">  user.getNickname(), user.getStatus(), user.isSocialSignup(), user.getProfilePath(),  </span><br><span class="line"> !user.checkUserLock(failMaxCnt), user.checkActiveUser(), grantedAuthorities);  </span><br><span class="line">  &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>여기에선 닉네임을 principal로 함께 넘겨주기 위해서 사용자정의 principal을 만들어서 사용했다.<br>시큐리티에서 제공하는 <code>new org.springframework.security.core.userdetails.User</code>을 사용할 수도 있다.</p>
+<p>로그인에선 <code>loadUserByUsername</code>을 try/catch로 받아서 exception 처리를 수행한다. </p>
+<h3 id="사용자정의-principal"><a href="#사용자정의-principal" class="headerlink" title="사용자정의 principal"></a>사용자정의 principal</h3><p>인터페이스 <code>UserDetails</code>을 구현하였다.<br><!--stackedit_data:
+eyJoaXN0b3J5IjpbLTEyMTk0MzA2OTZdfQ==
+--></p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/klugjo/hexo-theme-clean-blog" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2020 Hen&#39;s blog<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

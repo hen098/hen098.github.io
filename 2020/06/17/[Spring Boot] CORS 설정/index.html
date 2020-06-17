@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.8.0">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="프론트-서버 분리하여 개발하면 동일 출처 정책에 위배됨으로 CORS 문제가 발생할 수 있다.
+Same-origin policy (SOP)프로토컬, 도메인, 포트가 모두 같을시 동일 출처 정책을 따른다보통 api 사용할때, ajax에서 same-origin policy ">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Hen&#39;s blog">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Spring Boot에서 CORS 설정">
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="프론트-서버 분리하여 개발하면 동일 출처 정책에 위배됨으로 CORS 문제가 발생할 수 있다.
+Same-origin policy (SOP)프로토컬, 도메인, 포트가 모두 같을시 동일 출처 정책을 따른다보통 api 사용할때, ajax에서 same-origin policy ">
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Study">
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article">
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://hen098.github.comhttp://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg">
+    
+
+        <meta name="twitter:card" content="summary_large_image">
+
+    
+
+    
+        <meta name="twitter:image" content="https://hen098.github.comhttp://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg">
+    
+
+    <!-- Title -->
+    
+    <title>Spring Boot에서 CORS 설정 - Study</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Configurable Title</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/klugjo/hexo-theme-clean-blog">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Spring Boot에서 CORS 설정</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2020-06-17
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/springboot/">#springboot</a> <a href="/tags/cors/">#cors</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>프론트-서버 분리하여 개발하면 동일 출처 정책에 위배됨으로 CORS 문제가 발생할 수 있다.</p>
+<h2 id="Same-origin-policy-SOP"><a href="#Same-origin-policy-SOP" class="headerlink" title="Same-origin policy (SOP)"></a>Same-origin policy (SOP)</h2><p>프로토컬, 도메인, 포트가 모두 같을시 동일 출처 정책을 따른다<br>보통 api 사용할때, ajax에서 same-origin policy 를 따르지 않으면 오류가 나며 api 사용이 거절된다.<br>한 사이트에서 여러 도메인을 가지고 있을 경우, 동일 출처 정책을 따르지 않기 때문에 문제가 생긴다.  </p>
+<h2 id="CORS-Cross-origin-resource-sharing"><a href="#CORS-Cross-origin-resource-sharing" class="headerlink" title="CORS (Cross-origin resource sharing)"></a>CORS (Cross-origin resource sharing)</h2><p>자원을 외부 도메인에서 접근을 허용해주는 메커니즘<br>Same-origin policy와 반대되는 개념</p>
+<h3 id="CORS동작-과정"><a href="#CORS동작-과정" class="headerlink" title="CORS동작 과정"></a>CORS동작 과정</h3><ol>
+<li>pre-flight request : OPTIONS 메소드 요청을 수행하고, 가능한지 확인</li>
+<li>실제 요청 </li>
+</ol>
+<h2 id="Spring에서-해결-방법"><a href="#Spring에서-해결-방법" class="headerlink" title="Spring에서 해결 방법"></a>Spring에서 해결 방법</h2><p>보통 서버측에서 크로스도메인 설정하여 문제를 해결하는 것이 표준화된 방법이다.<br>기존에는 Filter 이용했지만, Spring 4.2 이후 버젼에서는 <code>@CrossOrigin</code> 사용 가능</p>
+<h3 id="컨트롤러에-클래스-단위로-CrossOrigin-어노테이션-사용"><a href="#컨트롤러에-클래스-단위로-CrossOrigin-어노테이션-사용" class="headerlink" title="컨트롤러에 클래스 단위로 @CrossOrigin 어노테이션 사용"></a>컨트롤러에 클래스 단위로 <code>@CrossOrigin</code> 어노테이션 사용</h3><figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@CrossOrigin</span>(origins=<span class="string">"*"</span>) <span class="comment">// 혹은 도메인 설정</span></span><br><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CommonController</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>특정 컨트롤러 클래스에 대해서만 설정한다.</p>
+<h3 id="Global-CORS-설정"><a href="#Global-CORS-설정" class="headerlink" title="Global CORS 설정"></a>Global CORS 설정</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Access-Control-Allow-Origin : 요청을 보내는 페이지의 출처 </span><br><span class="line">Access-Control-Allow-Methods : 요청을 허용하는 메소드 </span><br><span class="line">Access-Control-Max-Age : 클라이언트에서 preflight의 요청 결과를 저장할 시간 지정. 해당 시간 동안은 pre-flight를 다시 요청하지 않음.</span><br><span class="line">Access-Control-Allow-Headers : 요청을 허용하는 헤더</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span>  </span><br><span class="line"><span class="meta">@EnableWebMvc</span>  </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WebConfig</span> <span class="keyword">implements</span> <span class="title">WebMvcConfigurer</span> </span>&#123;  </span><br><span class="line">  <span class="meta">@Value</span>(<span class="string">"$&#123;mapping.url&#125;"</span>)  </span><br><span class="line">  <span class="keyword">private</span> String mappingUrl;  </span><br><span class="line">  </span><br><span class="line">  <span class="meta">@Override</span>  </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addCorsMappings</span><span class="params">(CorsRegistry registry)</span> </span>&#123;  </span><br><span class="line">  registry.addMapping(mappingUrl)  </span><br><span class="line">  .allowedOrigins(<span class="string">"*"</span>)  </span><br><span class="line">  .allowCredentials(<span class="keyword">true</span>)  </span><br><span class="line">  .allowedMethods(<span class="string">"POST"</span>, <span class="string">"GET"</span>, <span class="string">"PUT"</span>, <span class="string">"PATCH"</span>, <span class="string">"DELETE"</span>, <span class="string">"OPTIONS"</span>)  </span><br><span class="line">  .allowedHeaders(<span class="string">"Content-Type"</span>, <span class="string">"Authorization"</span>);  </span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p>전체적으로 접근이 가능하도록 global로 설정했는데, 계속 pre-filght access 실패했다는 에러메시지가 발생했다. </p>
+<h2 id="Spring-Security-에서-CORS-설정로-변경"><a href="#Spring-Security-에서-CORS-설정로-변경" class="headerlink" title="Spring Security 에서 CORS 설정로 변경"></a>Spring Security 에서 CORS 설정로 변경</h2><p>시큐리티를 사용중이라면, CORS를 필터만으로 적용하면 안된다는 글이 있었다.<br><figure class="highlight java"><figcaption><span>java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="meta">@EnableWebSecurity</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WebSecurityConfig</span> <span class="keyword">extends</span> <span class="title">WebSecurityConfigurerAdapter</span> </span>&#123;</span><br><span class="line">	<span class="meta">@Override</span>  </span><br><span class="line">	<span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">configure</span><span class="params">(HttpSecurity http)</span> <span class="keyword">throws</span> Exception </span>&#123;  </span><br><span class="line">	  http  </span><br><span class="line">	      .cors()  <span class="comment">// 1</span></span><br><span class="line">		  .and() </span><br><span class="line">		  <span class="comment">// 중략..</span></span><br><span class="line">		  .authorizeRequests()  </span><br><span class="line">		  .requestMatchers(CorsUtils::isPreFlightRequest).permitAll()	<span class="comment">// 2</span></span><br><span class="line">		  .antMatchers(<span class="string">"/**"</span>)</span><br><span class="line">		  .hasAnyRole(<span class="string">"USER"</span>)</span><br><span class="line">		  .anyRequest()  </span><br><span class="line">		  .authenticated();</span><br><span class="line">	&#125;  </span><br><span class="line">	  </span><br><span class="line">	<span class="meta">@Bean</span>	<span class="comment">// 3</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> CorsConfigurationSource <span class="title">corsConfigurationSource</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">	  CorsConfiguration configuration = <span class="keyword">new</span> CorsConfiguration();  </span><br><span class="line">	  configuration.addAllowedOrigin(<span class="string">"*"</span>);  </span><br><span class="line">	  configuration.addAllowedMethod(<span class="string">"*"</span>);  </span><br><span class="line">	  configuration.addAllowedHeader(<span class="string">"*"</span>);  </span><br><span class="line">	  configuration.setAllowCredentials(<span class="keyword">true</span>);  </span><br><span class="line">	  configuration.setMaxAge(<span class="number">3600L</span>);  </span><br><span class="line">	  UrlBasedCorsConfigurationSource source = <span class="keyword">new</span> UrlBasedCorsConfigurationSource();  </span><br><span class="line">	  source.registerCorsConfiguration(<span class="string">"/**"</span>, configuration);  </span><br><span class="line">	  <span class="keyword">return</span> source;  </span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>필요에 의해서 corsConfigurationSource 부분의 origins, method, header 등을 설정한다.<br><!--stackedit_data:
+eyJoaXN0b3J5IjpbLTY4MTc0Nzg3MSwtNDMxNjUwMywxMDgxNT
+QzODMzXX0=
+--></p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/klugjo/hexo-theme-clean-blog" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2020 Hen&#39;s blog<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
