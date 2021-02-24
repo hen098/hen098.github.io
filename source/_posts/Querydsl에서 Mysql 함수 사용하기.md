@@ -1,7 +1,5 @@
-
-
---- 
-title: "Querydsl에서 Mysql 함수 사용하기"
+---
+title: "Querydsl에서 Mysql함수 사용하기"
 tags: ["Querydsl"]
 --- 
 
