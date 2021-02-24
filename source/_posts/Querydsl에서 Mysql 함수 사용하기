@@ -1,0 +1,36 @@
+---
+
+
+---
+
+<h3 id="mysql-함수-설정">Mysql 함수 설정</h3>
+<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">import</span> org<span class="token punctuation">.</span>hibernate<span class="token punctuation">.</span>dialect<span class="token punctuation">.</span>MySQL57Dialect<span class="token punctuation">;</span>  
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>hibernate<span class="token punctuation">.</span>dialect<span class="token punctuation">.</span>function<span class="token punctuation">.</span>StandardSQLFunction<span class="token punctuation">;</span>  
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>hibernate<span class="token punctuation">.</span>type<span class="token punctuation">.</span>StandardBasicTypes<span class="token punctuation">;</span>  
+  
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MysqlCustomDialect</span> <span class="token keyword">extends</span> <span class="token class-name">MySQL57Dialect</span> <span class="token punctuation">{</span>  
+    <span class="token keyword">public</span> <span class="token function">MysqlCustomDialect</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>  
+        <span class="token keyword">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+  <span class="token function">registerFunction</span><span class="token punctuation">(</span><span class="token string">"Mysql 함수명"</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">StandardSQLFunction</span><span class="token punctuation">(</span><span class="token string">"호출명"</span><span class="token punctuation">,</span> StandardBasicTypes<span class="token punctuation">.</span>STRING<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+<span class="token punctuation">}</span>
+</code></pre>
+<ul>
+<li><code>registerFunction("Mysql등록된 함수명", Querydsl에서 사용할 이름과 리턴 타입)</code></li>
+</ul>
+<h3 id="application.yml-설정">application.yml 설정</h3>
+<pre class=" language-yml"><code class="prism  language-yml"><span class="token key atrule">jpa</span><span class="token punctuation">:</span> 
+  <span class="token key atrule">database</span><span class="token punctuation">:</span> mysql  
+  <span class="token key atrule">generate-ddl</span><span class="token punctuation">:</span> <span class="token boolean important">false  </span>
+  <span class="token key atrule">open-in-view</span><span class="token punctuation">:</span> <span class="token boolean important">false  </span>
+  <span class="token key atrule">hibernate</span><span class="token punctuation">:</span> 
+    <span class="token key atrule">ddl-auto</span><span class="token punctuation">:</span> none <span class="token comment"># 항상 조심!! </span>
+  <span class="token key atrule">properties</span><span class="token punctuation">:</span> 
+    <span class="token key atrule">hibernate</span><span class="token punctuation">:</span> 
+  <span class="token key atrule">database-platform</span><span class="token punctuation">:</span> com.example.querydsl.configuration.MysqlCustomDialect <span class="token comment"># 이 부분에 생성</span>
+</code></pre>
+<h3 id="querydsl-사용-방법">Querydsl 사용 방법</h3>
+<pre class=" language-java"><code class="prism  language-java"><span class="token function">select</span><span class="token punctuation">(</span>
+Expressions<span class="token punctuation">.</span><span class="token function">stringTemplate</span><span class="token punctuation">(</span><span class="token string">"호출명('KR',{0},{1})"</span><span class="token punctuation">,</span> schoolCode<span class="token punctuation">,</span> courseCode<span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span>
+</code></pre>
+
