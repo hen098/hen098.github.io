@@ -8,7 +8,8 @@ Producer (sender) 가 메시지를 큐에 전송하면 Consumer (receiver) 가 �
 ## Kafka 
 MQ 대표 솔루션 중 하나.
 
-
+## IBM MQ 
+가장 많이 사용되는 상용 MQ 제품으로 표준 JMS 메시징 기반이다.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0ODQ1MzIyMTNdfQ==
+eyJoaXN0b3J5IjpbMzMxOTE4NjAyLC0xNDg0NTMyMjEzXX0=
 -->
