@@ -27,6 +27,7 @@ AWS에서는 AMI(Amazon Machine Image) 형태로 이미지를 관리하고, Dock
 ## Docker
 이미지들의 코드화하는 방법 중 하나
 도커 파일로 코드들을 관리한다.
+도커로 컨테이너를 띄운다.
 
 ## 쿠버네이트 
 컨테이너를 배포하고 구성하는 도구 
@@ -35,6 +36,6 @@ AWS에서는 AMI(Amazon Machine Image) 형태로 이미지를 관리하고, Dock
 도커는 한개의 컨테이너를 관리하는데 최적하며, 쿠버네이트는 이런 도커들을 관리하는데 최적화되어있다.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM5OTU2MTY3MywxODM5MjE0Njk0LC0xMz
+eyJoaXN0b3J5IjpbMjExMzUzMzMxNSwxODM5MjE0Njk0LC0xMz
 U1Mjc0MjIzLC0zMDIwNjY0MzMsMTc5ODQ4MDQzMl19
 -->
