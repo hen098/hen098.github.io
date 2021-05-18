@@ -9,7 +9,8 @@ tags: ["docker"]
 원래의 OS 위에서 독자적인 게스트 OS를 돌린다. 독자적으로 돌아가는 가상 컴퓨터이다.
 
 ## 컨테이너
-호스트 
+OS상에 논리적인 구획 (컨테이너)을 만들고, 어플리케이션을 작동시키기 위해 필요한 라이브러리나 어플리케이션 등을 하나로 모아, 마치 별도의 서버인 것처럼 사용할 수 있게 만든 것이다. 
+오버헤드가 적어 가볍고 고속으로 작동한다.
 
 ## Docker
 도커엔진이 도커 이미지를 설치하면, 게스트OS 없이 분리시켜준다. 호스트OS는 그것을 공유한다. 게스트 OS가 없으므로 매우 빠르게 동작할 수 있다. 격리된 환경을 만들어준다.
@@ -21,5 +22,5 @@ tags: ["docker"]
 ### 컨테이너
 이미지가 실행된 상태, 환경이다. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE0NjAyNzQwNCwxNzk4NDgwNDMyXX0=
+eyJoaXN0b3J5IjpbLTE0OTY4OTkxMzcsMTc5ODQ4MDQzMl19
 -->
