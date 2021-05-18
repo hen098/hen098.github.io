@@ -23,17 +23,12 @@ AWS에서는 AMI(Amazon Machine Image) 형태로 이미지를 관리하고, Dock
 생성된 이미지를 통해 OS를 실행하게 되고, 실행된 OS에서 이것저것 요청에 따라 설정사항들을 변경하고, 이를 토대로 다시 이미지를 재생성하게 한다. 
 
 ## Docker
-도커엔진이 도커 이미지를 설치하면, 게스트OS 없이 분리시켜준다. 호스트OS는 그것을 공유한다. 게스트 OS가 없으므로 매우 빠르게 동작할 수 있다. 격리된 환경을 만들어준다.
-
-### 도커 이미지
-`베이스 이미지` 와 `도커 이미지` 가 있다. 추상적인 개념이다. 
-* 베이스 이미지 : 기본 OS 인스톨 이미지 라고 볼수 있음
-* 도커 이미지  > Dockerfile (이미지를 생성하는 방법 중 한가지)
-	* 베이스이미지 + 추가적인 것 인스톨하는 스크립트 
+이미지들의 코드화하는 방법 중 하나
+도커 파일로 코드들을 관리한다.
 
 ### 컨테이너
-이미지가 실행된 상태, 환경이다. 
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA1OTczODUxNywtMTM1NTI3NDIyMywtMz
-AyMDY2NDMzLDE3OTg0ODA0MzJdfQ==
+eyJoaXN0b3J5IjpbODI3MDg0Nzg0LC0xMzU1Mjc0MjIzLC0zMD
+IwNjY0MzMsMTc5ODQ4MDQzMl19
 -->
