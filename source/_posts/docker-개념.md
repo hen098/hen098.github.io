@@ -4,8 +4,13 @@ tags: ["docker"]
 ---
 # Docker
 가상머신과 유사한 기능을 가지면서, 가상머신보다 가벼운 형태이다. 
+
 ## 가상머신
 원래의 OS 위에서 독자적인 게스트 OS를 돌린다. 독자적으로 돌아가는 가상 컴퓨터이다.
+
+## 컨테이너
+호스트 
+
 ## Docker
 도커엔진이 도커 이미지를 설치하면, 게스트OS 없이 분리시켜준다. 호스트OS는 그것을 공유한다. 게스트 OS가 없으므로 매우 빠르게 동작할 수 있다. 격리된 환경을 만들어준다.
 ### 도커 이미지
@@ -16,5 +21,5 @@ tags: ["docker"]
 ### 컨테이너
 이미지가 실행된 상태, 환경이다. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5ODQ4MDQzMl19
+eyJoaXN0b3J5IjpbMTE0NjAyNzQwNCwxNzk4NDgwNDMyXX0=
 -->
