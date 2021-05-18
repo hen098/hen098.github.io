@@ -1,3 +1,8 @@
+---
+title : "MQ란"
+tags: ["MQ"]
+---
+
 # MQ
 Message Queue란 메시지 기반의 미들웨어로 메시지를 이용하여 여러 어플리케이션, 시스템, 서비스들을 연결해주는 솔루션이다.
 
@@ -11,5 +16,6 @@ MQ 대표 솔루션 중 하나.
 ## IBM MQ 
 가장 많이 사용되는 상용 MQ 제품으로 표준 JMS 메시징 기반이다.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzMxOTE4NjAyLC0xNDg0NTMyMjEzXX0=
+eyJoaXN0b3J5IjpbMTc2MDIwNDkyMSwzMzE5MTg2MDIsLTE0OD
+Q1MzIyMTNdfQ==
 -->
