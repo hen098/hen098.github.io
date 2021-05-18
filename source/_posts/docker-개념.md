@@ -12,6 +12,8 @@ tags: ["docker"]
 OS상에 논리적인 구획 (컨테이너)을 만들고, 어플리케이션을 작동시키기 위해 필요한 라이브러리나 어플리케이션 등을 하나로 모아, 마치 별도의 서버인 것처럼 사용할 수 있게 만든 것이다. 
 오버헤드가 적어 가볍고 고속으로 작동한다.
 
+이미지가 실행된 상태, 환경이다. 
+
 ### 컨테이너를 사용해야 하는 이유 
 가상머신은 하드웨어 스택을 가상화한다. 컨테이너는 이와 달리 운영체제 수준에서 가상화를 실시한다. 
 다수의 컨테이너를 OS 커널에서 직접 구동한다. 컨테이너는 훨씬 가볍고 운영체제 전체 부팅보다 메모리를 훨씬 적게 차지한다.
@@ -26,9 +28,7 @@ AWS에서는 AMI(Amazon Machine Image) 형태로 이미지를 관리하고, Dock
 이미지들의 코드화하는 방법 중 하나
 도커 파일로 코드들을 관리한다.
 
-### 컨테이너
-
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODI3MDg0Nzg0LC0xMzU1Mjc0MjIzLC0zMD
-IwNjY0MzMsMTc5ODQ4MDQzMl19
+eyJoaXN0b3J5IjpbMTgzOTIxNDY5NCwtMTM1NTI3NDIyMywtMz
+AyMDY2NDMzLDE3OTg0ODA0MzJdfQ==
 -->
