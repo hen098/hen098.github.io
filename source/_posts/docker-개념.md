@@ -30,8 +30,11 @@ AWS에서는 AMI(Amazon Machine Image) 형태로 이미지를 관리하고, Dock
 
 ## 쿠버네이트 
 컨테이너를 배포하고 구성하는 도구 
+구글에서 개발하였고 가장 널리 사용되는 오케스트레이션 프레임워크 
+
+도커는 한개의 컨테이너를 관리하는데 최적하며, 쿠버네이트는 이런 도커들을 관리하는데 최적화되어있다.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE2NjgxMjI3OSwxODM5MjE0Njk0LC0xMz
+eyJoaXN0b3J5IjpbLTM5OTU2MTY3MywxODM5MjE0Njk0LC0xMz
 U1Mjc0MjIzLC0zMDIwNjY0MzMsMTc5ODQ4MDQzMl19
 -->
