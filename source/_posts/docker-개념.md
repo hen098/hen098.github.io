@@ -28,7 +28,10 @@ AWS에서는 AMI(Amazon Machine Image) 형태로 이미지를 관리하고, Dock
 이미지들의 코드화하는 방법 중 하나
 도커 파일로 코드들을 관리한다.
 
+## 쿠버네이트 
+컨테이너를 배포하고 구성하는 도구 
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzOTIxNDY5NCwtMTM1NTI3NDIyMywtMz
-AyMDY2NDMzLDE3OTg0ODA0MzJdfQ==
+eyJoaXN0b3J5IjpbMTE2NjgxMjI3OSwxODM5MjE0Njk0LC0xMz
+U1Mjc0MjIzLC0zMDIwNjY0MzMsMTc5ODQ4MDQzMl19
 -->
