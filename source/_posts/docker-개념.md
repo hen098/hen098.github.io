@@ -17,8 +17,10 @@ OS상에 논리적인 구획 (컨테이너)을 만들고, 어플리케이션을 
 다수의 컨테이너를 OS 커널에서 직접 구동한다. 컨테이너는 훨씬 가볍고 운영체제 전체 부팅보다 메모리를 훨씬 적게 차지한다.
 
 ## IMAGE 
+코드를 이미지화하여 배포한다.
+AWS에서는 AMI(Amazon Machine Image) 형태로 이미지를 관리하고, Docker에서는 Docker Image형태로 관리한다.
 
-AWS에서는 AMI(Amazon Machine Image) 형태로 이미지를 관리하고
+생성된 이미지를 통해 
 
 ## Docker
 도커엔진이 도커 이미지를 설치하면, 게스트OS 없이 분리시켜준다. 호스트OS는 그것을 공유한다. 게스트 OS가 없으므로 매우 빠르게 동작할 수 있다. 격리된 환경을 만들어준다.
@@ -32,6 +34,6 @@ AWS에서는 AMI(Amazon Machine Image) 형태로 이미지를 관리하고
 ### 컨테이너
 이미지가 실행된 상태, 환경이다. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODc2MzgyODU0LC0zMDIwNjY0MzMsMTc5OD
-Q4MDQzMl19
+eyJoaXN0b3J5IjpbLTEzNTUyNzQyMjMsLTMwMjA2NjQzMywxNz
+k4NDgwNDMyXX0=
 -->
