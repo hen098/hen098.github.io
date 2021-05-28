@@ -56,5 +56,5 @@ jpa 관련 테스트 설정만 로드한다.
 -   내장형 데이터베이스를 사용하여 실제 데이터베이스를 사용하지 않고 테스트 데이터베이스로 테스트함
 -   `@Transactional` 어노테이션을 포함함으로 테스트가 완료되면 자동으로 롤백된다.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2MTk0MjA4Ml19
+eyJoaXN0b3J5IjpbMTM1ODU2MzM1NCwxNTYxOTQyMDgyXX0=
 -->
