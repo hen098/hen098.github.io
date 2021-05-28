@@ -10,7 +10,7 @@ given-when-then 패턴은 주석으로 처리하기 때문에 강제성을 줄�
 
 ```java
 Describe : 
-	Context : 
+    Context : 
     It : 
 
 ```
